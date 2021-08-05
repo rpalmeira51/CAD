@@ -25,11 +25,23 @@ int main(int argc, char* argv[]){
     }
     srand(time(NULL));
     double** a = (double ** ) malloc(n * sizeof(double*));
+	if( a == NULL) {
+		printf("Not enough memory, ending execution\n");
+		exit(-1);
+	}
 
     for (int i =0 ; i< n; i++){
         a[i] = (double * ) malloc(m * sizeof(double));
+		if( a[i] == NULL) {
+			printf("Not enough memory, ending execution\n");
+			exit(-1);
+		}
     }
     double* x = (double * ) malloc( m * sizeof(double));
+	if( x  == NULL) {
+		printf("Not enough memory, ending execution\n");
+		exit(-1);
+	}
     for (int i =0; i < n; i++){
         for( int j =0; j <m; j++){
             a[i][j] = (double) rand();
@@ -60,7 +72,10 @@ int main(int argc, char* argv[]){
 double* multiplyAxRow(double **a, double *x , int n, int m){
     double* b;
     b = (double * ) malloc( n* sizeof(double) );
-    
+   	if( b == NULL) {
+		printf("Not enough memory, ending execution\n");
+		exit(-1);
+	}
     clock_t begin = clock();
     for (int i= 0; i< n; i++){
         register double temp = 0;
@@ -72,7 +87,7 @@ double* multiplyAxRow(double **a, double *x , int n, int m){
     }
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Time elapsed sequential for: %lf \n",time_spent);
+    printf("Time elapsed row for: %lf \n",time_spent);
     return b;
 }
 
@@ -80,7 +95,10 @@ double* multiplyAxRow(double **a, double *x , int n, int m){
 double* multiplyAxColumn(double **a, double *x , int n, int m){
     double* b;
     b = (double * ) calloc( n, sizeof(double) );
-
+	if( b == NULL) {
+		printf("Not enough memory, ending execution\n");
+		exit(-1);
+	}
     clock_t begin = clock();
     for (int j= 0; j< m; j++){
         for (int i = 0; i< n; i++) {
@@ -90,7 +108,7 @@ double* multiplyAxColumn(double **a, double *x , int n, int m){
     }
     clock_t end = clock();
     double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("Time elapsed nonsequential for: %lf \n",time_spent);
+    printf("Time elapsed column for: %lf \n",time_spent);
     return b;
 }
 

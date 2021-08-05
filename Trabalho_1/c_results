@@ -1,0 +1,60 @@
+===============================
+Executing for matrix of size 2500x2500 and x of size 2500
+Time elapsed row for: 0.014438 
+Time elapsed column for: 0.043818 
+===============================
+===============================
+Executing for matrix of size 5000x5000 and x of size 5000
+Time elapsed row for: 0.057534 
+Time elapsed column for: 0.195499 
+===============================
+===============================
+Executing for matrix of size 7500x7500 and x of size 7500
+Time elapsed row for: 0.131104 
+Time elapsed column for: 0.731659 
+===============================
+===============================
+Executing for matrix of size 10000x10000 and x of size 10000
+Time elapsed row for: 0.254539 
+Time elapsed column for: 1.817992 
+===============================
+===============================
+Executing for matrix of size 12500x12500 and x of size 12500
+Time elapsed row for: 0.382164 
+Time elapsed column for: 2.131658 
+===============================
+===============================
+Executing for matrix of size 15000x15000 and x of size 15000
+Time elapsed row for: 0.661889 
+Time elapsed column for: 6.626456 
+===============================
+===============================
+Executing for matrix of size 17500x17500 and x of size 17500
+Time elapsed row for: 0.810248 
+Time elapsed column for: 13.331924 
+===============================
+===============================
+Executing for matrix of size 20000x20000 and x of size 20000
+Time elapsed row for: 0.945708 
+Time elapsed column for: 17.218142 
+===============================
+===============================
+Executing for matrix of size 22500x22500 and x of size 22500
+Time elapsed row for: 1.425380 
+Time elapsed column for: 23.548411 
+===============================
+===============================
+Executing for matrix of size 25000x25000 and x of size 25000
+Time elapsed row for: 1.799765 
+Time elapsed column for: 28.929309 
+===============================
+===============================
+Executing for matrix of size 27500x27500 and x of size 27500
+Time elapsed row for: 1.874117 
+Time elapsed column for: 40.896665 
+===============================
+===============================
+Executing for matrix of size 30000x30000 and x of size 30000
+Time elapsed row for: 2.402344 
+Time elapsed column for: 43.548400 
+===============================

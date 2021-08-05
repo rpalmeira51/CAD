@@ -1,0 +1,60 @@
+ ==============================================
+ Matrix 2500x2500
+ Time elapsed row funcion   3.79279926E-02 seconds
+ Time elapsed column funcion   1.61730051E-02 seconds
+ ==============================================
+ ==============================================
+ Matrix 5000x5000
+ Time elapsed row funcion  0.177728981     seconds
+ Time elapsed column funcion   6.57880306E-02 seconds
+ ==============================================
+ ==============================================
+ Matrix 7500x7500
+ Time elapsed row funcion  0.434069932     seconds
+ Time elapsed column funcion  0.161209941     seconds
+ ==============================================
+ ==============================================
+ Matrix 10000x10000
+ Time elapsed row funcion   1.07027388     seconds
+ Time elapsed column funcion  0.265455246     seconds
+ ==============================================
+ ==============================================
+ Matrix 12500x12500
+ Time elapsed row funcion   1.85608912     seconds
+ Time elapsed column funcion  0.415595055     seconds
+ ==============================================
+ ==============================================
+ Matrix 15000x15000
+ Time elapsed row funcion   6.43795729     seconds
+ Time elapsed column funcion  0.763401985     seconds
+ ==============================================
+ ==============================================
+ Matrix 17500x17500
+ Time elapsed row funcion   8.24878407     seconds
+ Time elapsed column funcion  0.946458817     seconds
+ ==============================================
+ ==============================================
+ Matrix 20000x20000
+ Time elapsed row funcion   12.9091721     seconds
+ Time elapsed column funcion   1.03783417     seconds
+ ==============================================
+ ==============================================
+ Matrix 22500x22500
+ Time elapsed row funcion   14.8837242     seconds
+ Time elapsed column funcion   2.41796875     seconds
+ ==============================================
+ ==============================================
+ Matrix 25000x25000
+ Time elapsed row funcion   19.5510273     seconds
+ Time elapsed column funcion   1.64108276     seconds
+ ==============================================
+ ==============================================
+ Matrix 27500x27500
+ Time elapsed row funcion   27.5073509     seconds
+ Time elapsed column funcion   1.97334290     seconds
+ ==============================================
+ ==============================================
+ Matrix 30000x30000
+ Time elapsed row funcion   35.3988686     seconds
+ Time elapsed column funcion   2.35245514     seconds
+ ==============================================
