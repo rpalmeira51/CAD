@@ -11,4 +11,4 @@ gfortran main.f90 -o fcad
 
 ./fcad 2500 2500
 
-Também pode, depois dos programas terem sido compilados, o script de shall que rodará os programas feitos em c e fortran para matrizes de 2500 até 30000 elementos
+Também pode, depois dos programas terem sido compilados, ser utilizado o script de shell que rodará os programas feitos em c e fortran para matrizes de 2500 até 30000 elementos
