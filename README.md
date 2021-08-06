@@ -4,7 +4,9 @@ Trabalho para disciplina de Computação de Alto Desempenho
 Para rodar os programas:
 ### C 
 gcc main.c -o ccad
+
 ./ccad 2500 2500
 ### Fortran 
-gfortran main.f90 -o fcad
+gfortran main.f90 -o fcada
+
 ./fcad 2500 2500
