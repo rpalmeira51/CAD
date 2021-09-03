@@ -115,6 +115,7 @@ Real LaplaceSolver :: timeStep(const Real dt, int step_size)
 	Real dx2 = g->dx*g->dx;
 	Real dy2 = g->dy*g->dy;
 	Real tmp;
+	Real errtemp;
 	Real err = 0.0;
 	int nx = g->nx;
 	int ny = g->ny;
@@ -139,7 +140,8 @@ Real LaplaceSolver :: timeStep(const Real dt, int step_size)
 			tmp = u[(subscript +j)];
 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
-			err += SQR(u[(subscript +j)] - tmp);
+			errtemp = (u[(subscript +j)] - tmp);
+			err += errtemp*errtemp;
 		}
 	}
 	return sqrt(err);

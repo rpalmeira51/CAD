@@ -1,0 +1,1573 @@
+   1              		.file	"laplacev4.cpp"
+   2              	# GNU C++17 (GCC) version 11.1.0 (x86_64-pc-linux-gnu)
+   3              	#	compiled by GNU C version 11.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl v
+   4              	
+   5              	# warning: MPFR header version 4.1.0 differs from library version 4.1.0-p13.
+   6              	# GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+   7              	# options passed: -mtune=generic -march=x86-64
+   8              		.text
+   9              		.local	_ZStL8__ioinit
+  10              		.comm	_ZStL8__ioinit,1,1
+  11              		.section	.rodata
+  12              	.LC0:
+  13 0000 7B00     		.string	"{"
+  14              	.LC1:
+  15 0002 2C2000   		.string	", "
+  16              	.LC2:
+  17 0005 7D0A00   		.string	"}\n"
+  18              		.text
+  19              		.globl	_Z11print_arrayPdRSo
+  21              	_Z11print_arrayPdRSo:
+  22              	.LFB2322:
+  23              		.cfi_startproc
+  24 0000 55       		pushq	%rbp	#
+  25              		.cfi_def_cfa_offset 16
+  26              		.cfi_offset 6, -16
+  27 0001 4889E5   		movq	%rsp, %rbp	#,
+  28              		.cfi_def_cfa_register 6
+  29 0004 4883EC20 		subq	$32, %rsp	#,
+  30 0008 48897DE8 		movq	%rdi, -24(%rbp)	# a, a
+  31 000c 488975E0 		movq	%rsi, -32(%rbp)	# o, o
+  32              	# laplacev4.cpp:12:   o << "{";
+  33 0010 488B45E0 		movq	-32(%rbp), %rax	# o, tmp86
+  34 0014 488D1500 		leaq	.LC0(%rip), %rdx	#, tmp87
+  34      000000
+  35 001b 4889D6   		movq	%rdx, %rsi	# tmp87,
+  36 001e 4889C7   		movq	%rax, %rdi	# tmp86,
+  37 0021 E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+  37      00
+  38              	# laplacev4.cpp:13:   for (std::size_t i = 500*250; i < (500)*251; ++i)
+  39 0026 48C745F8 		movq	$125000, -8(%rbp)	#, i
+  39      48E80100 
+  40              	# laplacev4.cpp:13:   for (std::size_t i = 500*250; i < (500)*251; ++i)
+  41 002e EB41     		jmp	.L2	#
+  42              	.L3:
+  43              	# laplacev4.cpp:15:     o << a[i] << ", ";
+  44 0030 488B45F8 		movq	-8(%rbp), %rax	# i, tmp88
+  45 0034 488D14C5 		leaq	0(,%rax,8), %rdx	#, _1
+  45      00000000 
+  46 003c 488B45E8 		movq	-24(%rbp), %rax	# a, tmp89
+  47 0040 4801D0   		addq	%rdx, %rax	# _1, _2
+  48 0043 488B10   		movq	(%rax), %rdx	# *_2, _3
+  49 0046 488B45E0 		movq	-32(%rbp), %rax	# o, tmp90
+  50 004a 66480F6E 		movq	%rdx, %xmm0	# _3,
+  50      C2
+  51 004f 4889C7   		movq	%rax, %rdi	# tmp90,
+  52 0052 E8000000 		call	_ZNSolsEd@PLT	#
+  52      00
+  53 0057 4889C2   		movq	%rax, %rdx	#, _4
+  54              	# laplacev4.cpp:15:     o << a[i] << ", ";
+  55 005a 488D0500 		leaq	.LC1(%rip), %rax	#, tmp91
+  55      000000
+  56 0061 4889C6   		movq	%rax, %rsi	# tmp91,
+  57 0064 4889D7   		movq	%rdx, %rdi	# _4,
+  58 0067 E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+  58      00
+  59              	# laplacev4.cpp:13:   for (std::size_t i = 500*250; i < (500)*251; ++i)
+  60 006c 488345F8 		addq	$1, -8(%rbp)	#, i
+  60      01
+  61              	.L2:
+  62              	# laplacev4.cpp:13:   for (std::size_t i = 500*250; i < (500)*251; ++i)
+  63 0071 48817DF8 		cmpq	$125499, -8(%rbp)	#, i
+  63      3BEA0100 
+  64 0079 76B5     		jbe	.L3	#,
+  65              	# laplacev4.cpp:17:   o  << "}\n";
+  66 007b 488B45E0 		movq	-32(%rbp), %rax	# o, tmp92
+  67 007f 488D1500 		leaq	.LC2(%rip), %rdx	#, tmp93
+  67      000000
+  68 0086 4889D6   		movq	%rdx, %rsi	# tmp93,
+  69 0089 4889C7   		movq	%rax, %rdi	# tmp92,
+  70 008c E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+  70      00
+  71              	# laplacev4.cpp:18: }
+  72 0091 90       		nop	
+  73 0092 C9       		leave	
+  74              		.cfi_def_cfa 7, 8
+  75 0093 C3       		ret	
+  76              		.cfi_endproc
+  77              	.LFE2322:
+  79              		.section	.text._Z7secondsv,"axG",@progbits,_Z7secondsv,comdat
+  80              		.weak	_Z7secondsv
+  82              	_Z7secondsv:
+  83              	.LFB2323:
+  84              		.cfi_startproc
+  85 0000 55       		pushq	%rbp	#
+  86              		.cfi_def_cfa_offset 16
+  87              		.cfi_offset 6, -16
+  88 0001 4889E5   		movq	%rsp, %rbp	#,
+  89              		.cfi_def_cfa_register 6
+  90              	# laplacev4.cpp:25: 	return ( (double) clock() ) * secs_per_tick;
+  91 0004 E8000000 		call	clock@PLT	#
+  91      00
+  92              	# laplacev4.cpp:25: 	return ( (double) clock() ) * secs_per_tick;
+  93 0009 660FEFC9 		pxor	%xmm1, %xmm1	# _2
+  94 000d F2480F2A 		cvtsi2sdq	%rax, %xmm1	# _1, _2
+  94      C8
+  95              	# laplacev4.cpp:25: 	return ( (double) clock() ) * secs_per_tick;
+  96 0012 F20F1005 		movsd	.LC3(%rip), %xmm0	#, tmp86
+  96      00000000 
+  97 001a F20F59C1 		mulsd	%xmm1, %xmm0	# _2, _5
+  98 001e 66480F7E 		movq	%xmm0, %rax	# _5, <retval>
+  98      C0
+  99              	# laplacev4.cpp:26: }
+ 100 0023 66480F6E 		movq	%rax, %xmm0	# <retval>,
+ 100      C0
+ 101 0028 5D       		popq	%rbp	#
+ 102              		.cfi_def_cfa 7, 8
+ 103 0029 C3       		ret	
+ 104              		.cfi_endproc
+ 105              	.LFE2323:
+ 107              		.section	.text._Z3SQRRKd,"axG",@progbits,_Z3SQRRKd,comdat
+ 108              		.weak	_Z3SQRRKd
+ 110              	_Z3SQRRKd:
+ 111              	.LFB2324:
+ 112              		.cfi_startproc
+ 113 0000 55       		pushq	%rbp	#
+ 114              		.cfi_def_cfa_offset 16
+ 115              		.cfi_offset 6, -16
+ 116 0001 4889E5   		movq	%rsp, %rbp	#,
+ 117              		.cfi_def_cfa_register 6
+ 118 0004 48897DF8 		movq	%rdi, -8(%rbp)	# x, x
+ 119              	# laplacev4.cpp:30: 	return (x*x);
+ 120 0008 488B45F8 		movq	-8(%rbp), %rax	# x, tmp86
+ 121 000c F20F1008 		movsd	(%rax), %xmm1	# *x_4(D), _1
+ 122              	# laplacev4.cpp:30: 	return (x*x);
+ 123 0010 488B45F8 		movq	-8(%rbp), %rax	# x, tmp87
+ 124 0014 F20F1000 		movsd	(%rax), %xmm0	# *x_4(D), _2
+ 125              	# laplacev4.cpp:30: 	return (x*x);
+ 126 0018 F20F59C1 		mulsd	%xmm1, %xmm0	# _1, _5
+ 127 001c 66480F7E 		movq	%xmm0, %rax	# _5, <retval>
+ 127      C0
+ 128              	# laplacev4.cpp:31: }
+ 129 0021 66480F6E 		movq	%rax, %xmm0	# <retval>,
+ 129      C0
+ 130 0026 5D       		popq	%rbp	#
+ 131              		.cfi_def_cfa 7, 8
+ 132 0027 C3       		ret	
+ 133              		.cfi_endproc
+ 134              	.LFE2324:
+ 136              		.section	.text._Z2BCdd,"axG",@progbits,_Z2BCdd,comdat
+ 137              		.weak	_Z2BCdd
+ 139              	_Z2BCdd:
+ 140              	.LFB2325:
+ 141              		.cfi_startproc
+ 142 0000 55       		pushq	%rbp	#
+ 143              		.cfi_def_cfa_offset 16
+ 144              		.cfi_offset 6, -16
+ 145 0001 4889E5   		movq	%rsp, %rbp	#,
+ 146              		.cfi_def_cfa_register 6
+ 147 0004 F20F1145 		movsd	%xmm0, -8(%rbp)	# x, x
+ 147      F8
+ 148 0009 F20F114D 		movsd	%xmm1, -16(%rbp)	# y, y
+ 148      F0
+ 149              	# laplacev4.cpp:35: 	return (x*x - y*y);
+ 150 000e F20F1045 		movsd	-8(%rbp), %xmm0	# x, tmp86
+ 150      F8
+ 151 0013 660F28C8 		movapd	%xmm0, %xmm1	# tmp86, tmp86
+ 152 0017 F20F59C8 		mulsd	%xmm0, %xmm1	# tmp86, tmp86
+ 153              	# laplacev4.cpp:35: 	return (x*x - y*y);
+ 154 001b F20F1045 		movsd	-16(%rbp), %xmm0	# y, tmp87
+ 154      F0
+ 155 0020 F20F59C0 		mulsd	%xmm0, %xmm0	# tmp87, _2
+ 156              	# laplacev4.cpp:35: 	return (x*x - y*y);
+ 157 0024 F20F5CC8 		subsd	%xmm0, %xmm1	# _2, _5
+ 158 0028 66480F7E 		movq	%xmm1, %rax	# _5, <retval>
+ 158      C8
+ 159              	# laplacev4.cpp:36: }
+ 160 002d 66480F6E 		movq	%rax, %xmm0	# <retval>,
+ 160      C0
+ 161 0032 5D       		popq	%rbp	#
+ 162              		.cfi_def_cfa 7, 8
+ 163 0033 C3       		ret	
+ 164              		.cfi_endproc
+ 165              	.LFE2325:
+ 167              		.text
+ 168              		.align 2
+ 169              		.globl	_ZN4GridC2Eii
+ 171              	_ZN4GridC2Eii:
+ 172              	.LFB2327:
+ 173              		.cfi_startproc
+ 174 0094 55       		pushq	%rbp	#
+ 175              		.cfi_def_cfa_offset 16
+ 176              		.cfi_offset 6, -16
+ 177 0095 4889E5   		movq	%rsp, %rbp	#,
+ 178              		.cfi_def_cfa_register 6
+ 179 0098 4883EC20 		subq	$32, %rsp	#,
+ 180 009c 48897DE8 		movq	%rdi, -24(%rbp)	# this, this
+ 181 00a0 8975E4   		movl	%esi, -28(%rbp)	# n_x, n_x
+ 182 00a3 8955E0   		movl	%edx, -32(%rbp)	# n_y, n_y
+ 183              	# laplacev4.cpp:48: Grid :: Grid(const int n_x, const int n_y) : nx(n_x), ny(n_y)
+ 184 00a6 488B45E8 		movq	-24(%rbp), %rax	# this, tmp105
+ 185 00aa 8B55E4   		movl	-28(%rbp), %edx	# n_x, tmp106
+ 186 00ad 895010   		movl	%edx, 16(%rax)	# tmp106, this_27(D)->nx
+ 187              	# laplacev4.cpp:48: Grid :: Grid(const int n_x, const int n_y) : nx(n_x), ny(n_y)
+ 188 00b0 488B45E8 		movq	-24(%rbp), %rax	# this, tmp107
+ 189 00b4 8B55E0   		movl	-32(%rbp), %edx	# n_y, tmp108
+ 190 00b7 895014   		movl	%edx, 20(%rax)	# tmp108, this_27(D)->ny
+ 191              	# laplacev4.cpp:50: 	dx = 1.0/Real(nx - 1);
+ 192 00ba 488B45E8 		movq	-24(%rbp), %rax	# this, tmp109
+ 193 00be 8B4010   		movl	16(%rax), %eax	# this_27(D)->nx, _1
+ 194              	# laplacev4.cpp:50: 	dx = 1.0/Real(nx - 1);
+ 195 00c1 83E801   		subl	$1, %eax	#, _2
+ 196              	# laplacev4.cpp:50: 	dx = 1.0/Real(nx - 1);
+ 197 00c4 660FEFC9 		pxor	%xmm1, %xmm1	# _3
+ 198 00c8 F20F2AC8 		cvtsi2sdl	%eax, %xmm1	# _2, _3
+ 199              	# laplacev4.cpp:50: 	dx = 1.0/Real(nx - 1);
+ 200 00cc F20F1005 		movsd	.LC4(%rip), %xmm0	#, tmp110
+ 200      00000000 
+ 201 00d4 F20F5EC1 		divsd	%xmm1, %xmm0	# _3, _4
+ 202              	# laplacev4.cpp:50: 	dx = 1.0/Real(nx - 1);
+ 203 00d8 488B45E8 		movq	-24(%rbp), %rax	# this, tmp111
+ 204 00dc F20F1100 		movsd	%xmm0, (%rax)	# _4, this_27(D)->dx
+ 205              	# laplacev4.cpp:51: 	dy = 1.0/Real(ny - 1);
+ 206 00e0 488B45E8 		movq	-24(%rbp), %rax	# this, tmp112
+ 207 00e4 8B4014   		movl	20(%rax), %eax	# this_27(D)->ny, _5
+ 208              	# laplacev4.cpp:51: 	dy = 1.0/Real(ny - 1);
+ 209 00e7 83E801   		subl	$1, %eax	#, _6
+ 210              	# laplacev4.cpp:51: 	dy = 1.0/Real(ny - 1);
+ 211 00ea 660FEFC9 		pxor	%xmm1, %xmm1	# _7
+ 212 00ee F20F2AC8 		cvtsi2sdl	%eax, %xmm1	# _6, _7
+ 213              	# laplacev4.cpp:51: 	dy = 1.0/Real(ny - 1);
+ 214 00f2 F20F1005 		movsd	.LC4(%rip), %xmm0	#, tmp113
+ 214      00000000 
+ 215 00fa F20F5EC1 		divsd	%xmm1, %xmm0	# _7, _8
+ 216              	# laplacev4.cpp:51: 	dy = 1.0/Real(ny - 1);
+ 217 00fe 488B45E8 		movq	-24(%rbp), %rax	# this, tmp114
+ 218 0102 F20F1140 		movsd	%xmm0, 8(%rax)	# _8, this_27(D)->dy
+ 218      08
+ 219              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 220 0107 488B45E8 		movq	-24(%rbp), %rax	# this, tmp115
+ 221 010b 8B5010   		movl	16(%rax), %edx	# this_27(D)->nx, _9
+ 222              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 223 010e 488B45E8 		movq	-24(%rbp), %rax	# this, tmp116
+ 224 0112 8B4014   		movl	20(%rax), %eax	# this_27(D)->ny, _10
+ 225              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 226 0115 0FAFC2   		imull	%edx, %eax	# _9, _11
+ 227 0118 4898     		cltq
+ 228              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 229 011a 48BAFFFF 		movabsq	$1152921504606846975, %rdx	#, tmp117
+ 229      FFFFFFFF 
+ 229      FF0F
+ 230 0124 4839D0   		cmpq	%rdx, %rax	# tmp117, _35
+ 231 0127 7720     		ja	.L11	#,
+ 232              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 233 0129 48C1E003 		salq	$3, %rax	#, iftmp.0_37
+ 234 012d 4889C7   		movq	%rax, %rdi	# iftmp.0_37,
+ 235 0130 E8000000 		call	_Znam@PLT	#
+ 235      00
+ 236 0135 4889C2   		movq	%rax, %rdx	# tmp118, _12
+ 237              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 238 0138 488B45E8 		movq	-24(%rbp), %rax	# this, tmp119
+ 239 013c 48895018 		movq	%rdx, 24(%rax)	# _12, this_27(D)->u
+ 240              	# laplacev4.cpp:53: 	for (int i=0; i<nx; ++i) {
+ 241 0140 C745F800 		movl	$0, -8(%rbp)	#, i
+ 241      000000
+ 242              	# laplacev4.cpp:53: 	for (int i=0; i<nx; ++i) {
+ 243 0147 EB4D     		jmp	.L13	#
+ 244              	.L11:
+ 245              	# laplacev4.cpp:52: 	u = new Real [nx*ny];
+ 246 0149 E8000000 		call	__cxa_throw_bad_array_new_length@PLT	#
+ 246      00
+ 247              	.L16:
+ 248              	# laplacev4.cpp:54: 		for (int j=0; j<ny; ++j) {
+ 249 014e C745FC00 		movl	$0, -4(%rbp)	#, j
+ 249      000000
+ 250              	# laplacev4.cpp:54: 		for (int j=0; j<ny; ++j) {
+ 251 0155 EB2F     		jmp	.L14	#
+ 252              	.L15:
+ 253              	# laplacev4.cpp:55: 			u[( i*( nx) + j )] = 0.0;
+ 254 0157 488B45E8 		movq	-24(%rbp), %rax	# this, tmp120
+ 255 015b 488B5018 		movq	24(%rax), %rdx	# this_27(D)->u, _13
+ 256              	# laplacev4.cpp:55: 			u[( i*( nx) + j )] = 0.0;
+ 257 015f 488B45E8 		movq	-24(%rbp), %rax	# this, tmp121
+ 258 0163 8B4010   		movl	16(%rax), %eax	# this_27(D)->nx, _14
+ 259              	# laplacev4.cpp:55: 			u[( i*( nx) + j )] = 0.0;
+ 260 0166 0FAF45F8 		imull	-8(%rbp), %eax	# i, _14
+ 261 016a 89C1     		movl	%eax, %ecx	# _14, _15
+ 262              	# laplacev4.cpp:55: 			u[( i*( nx) + j )] = 0.0;
+ 263 016c 8B45FC   		movl	-4(%rbp), %eax	# j, tmp122
+ 264 016f 01C8     		addl	%ecx, %eax	# _15, _16
+ 265 0171 4898     		cltq
+ 266              	# laplacev4.cpp:55: 			u[( i*( nx) + j )] = 0.0;
+ 267 0173 48C1E003 		salq	$3, %rax	#, _18
+ 268 0177 4801D0   		addq	%rdx, %rax	# _13, _19
+ 269              	# laplacev4.cpp:55: 			u[( i*( nx) + j )] = 0.0;
+ 270 017a 660FEFC0 		pxor	%xmm0, %xmm0	# tmp123
+ 271 017e F20F1100 		movsd	%xmm0, (%rax)	# tmp123, *_19
+ 272              	# laplacev4.cpp:54: 		for (int j=0; j<ny; ++j) {
+ 273 0182 8345FC01 		addl	$1, -4(%rbp)	#, j
+ 274              	.L14:
+ 275              	# laplacev4.cpp:54: 		for (int j=0; j<ny; ++j) {
+ 276 0186 488B45E8 		movq	-24(%rbp), %rax	# this, tmp124
+ 277 018a 8B4014   		movl	20(%rax), %eax	# this_27(D)->ny, _20
+ 278              	# laplacev4.cpp:54: 		for (int j=0; j<ny; ++j) {
+ 279 018d 3945FC   		cmpl	%eax, -4(%rbp)	# _20, j
+ 280 0190 7CC5     		jl	.L15	#,
+ 281              	# laplacev4.cpp:53: 	for (int i=0; i<nx; ++i) {
+ 282 0192 8345F801 		addl	$1, -8(%rbp)	#, i
+ 283              	.L13:
+ 284              	# laplacev4.cpp:53: 	for (int i=0; i<nx; ++i) {
+ 285 0196 488B45E8 		movq	-24(%rbp), %rax	# this, tmp125
+ 286 019a 8B4010   		movl	16(%rax), %eax	# this_27(D)->nx, _21
+ 287              	# laplacev4.cpp:53: 	for (int i=0; i<nx; ++i) {
+ 288 019d 3945F8   		cmpl	%eax, -8(%rbp)	# _21, i
+ 289 01a0 7CAC     		jl	.L16	#,
+ 290              	# laplacev4.cpp:58: }
+ 291 01a2 90       		nop	
+ 292 01a3 90       		nop	
+ 293 01a4 C9       		leave	
+ 294              		.cfi_def_cfa 7, 8
+ 295 01a5 C3       		ret	
+ 296              		.cfi_endproc
+ 297              	.LFE2327:
+ 299              		.globl	_ZN4GridC1Eii
+ 300              		.set	_ZN4GridC1Eii,_ZN4GridC2Eii
+ 301              		.align 2
+ 302              		.globl	_ZN4GridD2Ev
+ 304              	_ZN4GridD2Ev:
+ 305              	.LFB2330:
+ 306              		.cfi_startproc
+ 307 01a6 55       		pushq	%rbp	#
+ 308              		.cfi_def_cfa_offset 16
+ 309              		.cfi_offset 6, -16
+ 310 01a7 4889E5   		movq	%rsp, %rbp	#,
+ 311              		.cfi_def_cfa_register 6
+ 312 01aa 4883EC10 		subq	$16, %rsp	#,
+ 313 01ae 48897DF8 		movq	%rdi, -8(%rbp)	# this, this
+ 314              	# laplacev4.cpp:66: 	delete [] u;
+ 315 01b2 488B45F8 		movq	-8(%rbp), %rax	# this, tmp84
+ 316 01b6 488B4018 		movq	24(%rax), %rax	# this_5(D)->u, _1
+ 317              	# laplacev4.cpp:66: 	delete [] u;
+ 318 01ba 4885C0   		testq	%rax, %rax	# _1
+ 319 01bd 7410     		je	.L19	#,
+ 320              	# laplacev4.cpp:66: 	delete [] u;
+ 321 01bf 488B45F8 		movq	-8(%rbp), %rax	# this, tmp85
+ 322 01c3 488B4018 		movq	24(%rax), %rax	# this_5(D)->u, _2
+ 323 01c7 4889C7   		movq	%rax, %rdi	# _2,
+ 324 01ca E8000000 		call	_ZdaPv@PLT	#
+ 324      00
+ 325              	.L19:
+ 326              	# laplacev4.cpp:67: }
+ 327 01cf 90       		nop	
+ 328 01d0 C9       		leave	
+ 329              		.cfi_def_cfa 7, 8
+ 330 01d1 C3       		ret	
+ 331              		.cfi_endproc
+ 332              	.LFE2330:
+ 334              		.globl	_ZN4GridD1Ev
+ 335              		.set	_ZN4GridD1Ev,_ZN4GridD2Ev
+ 336              		.align 2
+ 337              		.globl	_ZN4Grid9setBCFuncEPFdddE
+ 339              	_ZN4Grid9setBCFuncEPFdddE:
+ 340              	.LFB2332:
+ 341              		.cfi_startproc
+ 342 01d2 55       		pushq	%rbp	#
+ 343              		.cfi_def_cfa_offset 16
+ 344              		.cfi_offset 6, -16
+ 345 01d3 4889E5   		movq	%rsp, %rbp	#,
+ 346              		.cfi_def_cfa_register 6
+ 347 01d6 53       		pushq	%rbx	#
+ 348 01d7 4883EC58 		subq	$88, %rsp	#,
+ 349              		.cfi_offset 3, -24
+ 350 01db 48897DA8 		movq	%rdi, -88(%rbp)	# this, this
+ 351 01df 488975A0 		movq	%rsi, -96(%rbp)	# f, f
+ 352              	# laplacev4.cpp:72: 	xmin = 0.0;
+ 353 01e3 660FEFC0 		pxor	%xmm0, %xmm0	# tmp124
+ 354 01e7 F20F1145 		movsd	%xmm0, -64(%rbp)	# tmp124, xmin
+ 354      C0
+ 355              	# laplacev4.cpp:73: 	ymin = 0.0;
+ 356 01ec 660FEFC0 		pxor	%xmm0, %xmm0	# tmp125
+ 357 01f0 F20F1145 		movsd	%xmm0, -56(%rbp)	# tmp125, ymin
+ 357      C8
+ 358              	# laplacev4.cpp:74: 	xmax = 1.0;
+ 359 01f5 F20F1005 		movsd	.LC4(%rip), %xmm0	#, tmp126
+ 359      00000000 
+ 360 01fd F20F1145 		movsd	%xmm0, -48(%rbp)	# tmp126, xmax
+ 360      D0
+ 361              	# laplacev4.cpp:75: 	ymax = 1.0;
+ 362 0202 F20F1005 		movsd	.LC4(%rip), %xmm0	#, tmp127
+ 362      00000000 
+ 363 020a F20F1145 		movsd	%xmm0, -40(%rbp)	# tmp127, ymax
+ 363      D8
+ 364              	# laplacev4.cpp:77: 	for (int j=0; j<ny; ++j) {
+ 365 020f C745B800 		movl	$0, -72(%rbp)	#, j
+ 365      000000
+ 366              	# laplacev4.cpp:77: 	for (int j=0; j<ny; ++j) {
+ 367 0216 E99F0000 		jmp	.L21	#
+ 367      00
+ 368              	.L22:
+ 369              	# laplacev4.cpp:78: 		y = j*dy;
+ 370 021b 660FEFC9 		pxor	%xmm1, %xmm1	# _1
+ 371 021f F20F2A4D 		cvtsi2sdl	-72(%rbp), %xmm1	# j, _1
+ 371      B8
+ 372              	# laplacev4.cpp:78: 		y = j*dy;
+ 373 0224 488B45A8 		movq	-88(%rbp), %rax	# this, tmp128
+ 374 0228 F20F1040 		movsd	8(%rax), %xmm0	# this_53(D)->dy, _2
+ 374      08
+ 375              	# laplacev4.cpp:78: 		y = j*dy;
+ 376 022d F20F59C1 		mulsd	%xmm1, %xmm0	# _1, tmp129
+ 377 0231 F20F1145 		movsd	%xmm0, -24(%rbp)	# tmp129, y
+ 377      E8
+ 378              	# laplacev4.cpp:79: 		u[j] = f(xmin, y);
+ 379 0236 488B55A0 		movq	-96(%rbp), %rdx	# f, f.1_3
+ 380              	# laplacev4.cpp:79: 		u[j] = f(xmin, y);
+ 381 023a 488B45A8 		movq	-88(%rbp), %rax	# this, tmp130
+ 382 023e 488B4818 		movq	24(%rax), %rcx	# this_53(D)->u, _4
+ 383              	# laplacev4.cpp:79: 		u[j] = f(xmin, y);
+ 384 0242 8B45B8   		movl	-72(%rbp), %eax	# j, tmp131
+ 385 0245 4898     		cltq
+ 386              	# laplacev4.cpp:79: 		u[j] = f(xmin, y);
+ 387 0247 48C1E003 		salq	$3, %rax	#, _6
+ 388 024b 488D1C01 		leaq	(%rcx,%rax), %rbx	#, _7
+ 389              	# laplacev4.cpp:79: 		u[j] = f(xmin, y);
+ 390 024f F20F1045 		movsd	-24(%rbp), %xmm0	# y, tmp132
+ 390      E8
+ 391 0254 488B45C0 		movq	-64(%rbp), %rax	# xmin, tmp133
+ 392 0258 660F28C8 		movapd	%xmm0, %xmm1	# tmp132,
+ 393 025c 66480F6E 		movq	%rax, %xmm0	# tmp133,
+ 393      C0
+ 394 0261 FFD2     		call	*%rdx	# f.1_3
+ 395 0263 66480F7E 		movq	%xmm0, %rax	#, _8
+ 395      C0
+ 396              	# laplacev4.cpp:79: 		u[j] = f(xmin, y);
+ 397 0268 488903   		movq	%rax, (%rbx)	# _8, *_7
+ 398              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 399 026b 488B55A0 		movq	-96(%rbp), %rdx	# f, f.2_9
+ 400              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 401 026f 488B45A8 		movq	-88(%rbp), %rax	# this, tmp134
+ 402 0273 488B7018 		movq	24(%rax), %rsi	# this_53(D)->u, _10
+ 403              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 404 0277 488B45A8 		movq	-88(%rbp), %rax	# this, tmp135
+ 405 027b 8B4010   		movl	16(%rax), %eax	# this_53(D)->nx, _11
+ 406              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 407 027e 8D48FF   		leal	-1(%rax), %ecx	#, _12
+ 408              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 409 0281 488B45A8 		movq	-88(%rbp), %rax	# this, tmp136
+ 410 0285 8B4010   		movl	16(%rax), %eax	# this_53(D)->nx, _13
+ 411              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 412 0288 0FAFC8   		imull	%eax, %ecx	# _13, _14
+ 413              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 414 028b 8B45B8   		movl	-72(%rbp), %eax	# j, tmp137
+ 415 028e 01C8     		addl	%ecx, %eax	# _14, _15
+ 416 0290 4898     		cltq
+ 417              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 418 0292 48C1E003 		salq	$3, %rax	#, _17
+ 419 0296 488D1C06 		leaq	(%rsi,%rax), %rbx	#, _18
+ 420              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 421 029a F20F1045 		movsd	-24(%rbp), %xmm0	# y, tmp138
+ 421      E8
+ 422 029f 488B45D0 		movq	-48(%rbp), %rax	# xmax, tmp139
+ 423 02a3 660F28C8 		movapd	%xmm0, %xmm1	# tmp138,
+ 424 02a7 66480F6E 		movq	%rax, %xmm0	# tmp139,
+ 424      C0
+ 425 02ac FFD2     		call	*%rdx	# f.2_9
+ 426 02ae 66480F7E 		movq	%xmm0, %rax	#, _19
+ 426      C0
+ 427              	# laplacev4.cpp:80: 		u[(nx-1)*nx + j] = f(xmax, y);
+ 428 02b3 488903   		movq	%rax, (%rbx)	# _19, *_18
+ 429              	# laplacev4.cpp:77: 	for (int j=0; j<ny; ++j) {
+ 430 02b6 8345B801 		addl	$1, -72(%rbp)	#, j
+ 431              	.L21:
+ 432              	# laplacev4.cpp:77: 	for (int j=0; j<ny; ++j) {
+ 433 02ba 488B45A8 		movq	-88(%rbp), %rax	# this, tmp140
+ 434 02be 8B4014   		movl	20(%rax), %eax	# this_53(D)->ny, _20
+ 435              	# laplacev4.cpp:77: 	for (int j=0; j<ny; ++j) {
+ 436 02c1 3945B8   		cmpl	%eax, -72(%rbp)	# _20, j
+ 437 02c4 0F8C51FF 		jl	.L22	#,
+ 437      FFFF
+ 438              	# laplacev4.cpp:83: 	for (int i=0; i<nx; ++i) {
+ 439 02ca C745BC00 		movl	$0, -68(%rbp)	#, i
+ 439      000000
+ 440              	# laplacev4.cpp:83: 	for (int i=0; i<nx; ++i) {
+ 441 02d1 E9A70000 		jmp	.L23	#
+ 441      00
+ 442              	.L24:
+ 443              	# laplacev4.cpp:84: 		x = i*dx;
+ 444 02d6 660FEFC9 		pxor	%xmm1, %xmm1	# _21
+ 445 02da F20F2A4D 		cvtsi2sdl	-68(%rbp), %xmm1	# i, _21
+ 445      BC
+ 446              	# laplacev4.cpp:84: 		x = i*dx;
+ 447 02df 488B45A8 		movq	-88(%rbp), %rax	# this, tmp141
+ 448 02e3 F20F1000 		movsd	(%rax), %xmm0	# this_53(D)->dx, _22
+ 449              	# laplacev4.cpp:84: 		x = i*dx;
+ 450 02e7 F20F59C1 		mulsd	%xmm1, %xmm0	# _21, tmp142
+ 451 02eb F20F1145 		movsd	%xmm0, -32(%rbp)	# tmp142, x
+ 451      E0
+ 452              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 453 02f0 488B55A0 		movq	-96(%rbp), %rdx	# f, f.3_23
+ 454              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 455 02f4 488B45A8 		movq	-88(%rbp), %rax	# this, tmp143
+ 456 02f8 488B4818 		movq	24(%rax), %rcx	# this_53(D)->u, _24
+ 457              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 458 02fc 488B45A8 		movq	-88(%rbp), %rax	# this, tmp144
+ 459 0300 8B4010   		movl	16(%rax), %eax	# this_53(D)->nx, _25
+ 460              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 461 0303 0FAF45BC 		imull	-68(%rbp), %eax	# i, _26
+ 462 0307 4898     		cltq
+ 463              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 464 0309 48C1E003 		salq	$3, %rax	#, _28
+ 465 030d 488D1C01 		leaq	(%rcx,%rax), %rbx	#, _29
+ 466              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 467 0311 F20F1045 		movsd	-56(%rbp), %xmm0	# ymin, tmp145
+ 467      C8
+ 468 0316 488B45E0 		movq	-32(%rbp), %rax	# x, tmp146
+ 469 031a 660F28C8 		movapd	%xmm0, %xmm1	# tmp145,
+ 470 031e 66480F6E 		movq	%rax, %xmm0	# tmp146,
+ 470      C0
+ 471 0323 FFD2     		call	*%rdx	# f.3_23
+ 472 0325 66480F7E 		movq	%xmm0, %rax	#, _30
+ 472      C0
+ 473              	# laplacev4.cpp:85: 		u[i*nx ] = f(x, ymin);
+ 474 032a 488903   		movq	%rax, (%rbx)	# _30, *_29
+ 475              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 476 032d 488B55A0 		movq	-96(%rbp), %rdx	# f, f.4_31
+ 477              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 478 0331 488B45A8 		movq	-88(%rbp), %rax	# this, tmp147
+ 479 0335 488B4818 		movq	24(%rax), %rcx	# this_53(D)->u, _32
+ 480              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 481 0339 488B45A8 		movq	-88(%rbp), %rax	# this, tmp148
+ 482 033d 8B4010   		movl	16(%rax), %eax	# this_53(D)->nx, _33
+ 483              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 484 0340 0FAF45BC 		imull	-68(%rbp), %eax	# i, _33
+ 485 0344 89C6     		movl	%eax, %esi	# _33, _34
+ 486              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 487 0346 488B45A8 		movq	-88(%rbp), %rax	# this, tmp149
+ 488 034a 8B4014   		movl	20(%rax), %eax	# this_53(D)->ny, _35
+ 489              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 490 034d 01F0     		addl	%esi, %eax	# _34, _36
+ 491 034f 4898     		cltq
+ 492              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 493 0351 48C1E003 		salq	$3, %rax	#, _38
+ 494 0355 4883E808 		subq	$8, %rax	#, _39
+ 495 0359 488D1C01 		leaq	(%rcx,%rax), %rbx	#, _40
+ 496              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 497 035d F20F1045 		movsd	-40(%rbp), %xmm0	# ymax, tmp150
+ 497      D8
+ 498 0362 488B45E0 		movq	-32(%rbp), %rax	# x, tmp151
+ 499 0366 660F28C8 		movapd	%xmm0, %xmm1	# tmp150,
+ 500 036a 66480F6E 		movq	%rax, %xmm0	# tmp151,
+ 500      C0
+ 501 036f FFD2     		call	*%rdx	# f.4_31
+ 502 0371 66480F7E 		movq	%xmm0, %rax	#, _41
+ 502      C0
+ 503              	# laplacev4.cpp:86: 		u[i*nx + ny-1] = f(x, ymax);
+ 504 0376 488903   		movq	%rax, (%rbx)	# _41, *_40
+ 505              	# laplacev4.cpp:83: 	for (int i=0; i<nx; ++i) {
+ 506 0379 8345BC01 		addl	$1, -68(%rbp)	#, i
+ 507              	.L23:
+ 508              	# laplacev4.cpp:83: 	for (int i=0; i<nx; ++i) {
+ 509 037d 488B45A8 		movq	-88(%rbp), %rax	# this, tmp152
+ 510 0381 8B4010   		movl	16(%rax), %eax	# this_53(D)->nx, _42
+ 511              	# laplacev4.cpp:83: 	for (int i=0; i<nx; ++i) {
+ 512 0384 3945BC   		cmpl	%eax, -68(%rbp)	# _42, i
+ 513 0387 0F8C49FF 		jl	.L24	#,
+ 513      FFFF
+ 514              	# laplacev4.cpp:88: }
+ 515 038d 90       		nop	
+ 516 038e 90       		nop	
+ 517 038f 488B5DF8 		movq	-8(%rbp), %rbx	#,
+ 518 0393 C9       		leave	
+ 519              		.cfi_def_cfa 7, 8
+ 520 0394 C3       		ret	
+ 521              		.cfi_endproc
+ 522              	.LFE2332:
+ 524 0395 90       		.align 2
+ 525              		.globl	_ZN13LaplaceSolverC2EP4Grid
+ 527              	_ZN13LaplaceSolverC2EP4Grid:
+ 528              	.LFB2334:
+ 529              		.cfi_startproc
+ 530 0396 55       		pushq	%rbp	#
+ 531              		.cfi_def_cfa_offset 16
+ 532              		.cfi_offset 6, -16
+ 533 0397 4889E5   		movq	%rsp, %rbp	#,
+ 534              		.cfi_def_cfa_register 6
+ 535 039a 4883EC10 		subq	$16, %rsp	#,
+ 536 039e 48897DF8 		movq	%rdi, -8(%rbp)	# this, this
+ 537 03a2 488975F0 		movq	%rsi, -16(%rbp)	# grid, grid
+ 538              	# laplacev4.cpp:101: 	g = grid;
+ 539 03a6 488B45F8 		movq	-8(%rbp), %rax	# this, tmp82
+ 540 03aa 488B55F0 		movq	-16(%rbp), %rdx	# grid, tmp83
+ 541 03ae 488910   		movq	%rdx, (%rax)	# tmp83, this_2(D)->g
+ 542              	# laplacev4.cpp:102: 	initialize();
+ 543 03b1 488B45F8 		movq	-8(%rbp), %rax	# this, tmp84
+ 544 03b5 4889C7   		movq	%rax, %rdi	# tmp84,
+ 545 03b8 E8000000 		call	_ZN13LaplaceSolver10initializeEv	#
+ 545      00
+ 546              	# laplacev4.cpp:103: }
+ 547 03bd 90       		nop	
+ 548 03be C9       		leave	
+ 549              		.cfi_def_cfa 7, 8
+ 550 03bf C3       		ret	
+ 551              		.cfi_endproc
+ 552              	.LFE2334:
+ 554              		.globl	_ZN13LaplaceSolverC1EP4Grid
+ 555              		.set	_ZN13LaplaceSolverC1EP4Grid,_ZN13LaplaceSolverC2EP4Grid
+ 556              		.align 2
+ 557              		.globl	_ZN13LaplaceSolverD2Ev
+ 559              	_ZN13LaplaceSolverD2Ev:
+ 560              	.LFB2337:
+ 561              		.cfi_startproc
+ 562 03c0 55       		pushq	%rbp	#
+ 563              		.cfi_def_cfa_offset 16
+ 564              		.cfi_offset 6, -16
+ 565 03c1 4889E5   		movq	%rsp, %rbp	#,
+ 566              		.cfi_def_cfa_register 6
+ 567 03c4 48897DF8 		movq	%rdi, -8(%rbp)	# this, this
+ 568              	# laplacev4.cpp:107: }
+ 569 03c8 90       		nop	
+ 570 03c9 5D       		popq	%rbp	#
+ 571              		.cfi_def_cfa 7, 8
+ 572 03ca C3       		ret	
+ 573              		.cfi_endproc
+ 574              	.LFE2337:
+ 576              		.globl	_ZN13LaplaceSolverD1Ev
+ 577              		.set	_ZN13LaplaceSolverD1Ev,_ZN13LaplaceSolverD2Ev
+ 578 03cb 90       		.align 2
+ 579              		.globl	_ZN13LaplaceSolver10initializeEv
+ 581              	_ZN13LaplaceSolver10initializeEv:
+ 582              	.LFB2339:
+ 583              		.cfi_startproc
+ 584 03cc 55       		pushq	%rbp	#
+ 585              		.cfi_def_cfa_offset 16
+ 586              		.cfi_offset 6, -16
+ 587 03cd 4889E5   		movq	%rsp, %rbp	#,
+ 588              		.cfi_def_cfa_register 6
+ 589 03d0 48897DF8 		movq	%rdi, -8(%rbp)	# this, this
+ 590              	# laplacev4.cpp:111: }
+ 591 03d4 90       		nop	
+ 592 03d5 5D       		popq	%rbp	#
+ 593              		.cfi_def_cfa 7, 8
+ 594 03d6 C3       		ret	
+ 595              		.cfi_endproc
+ 596              	.LFE2339:
+ 598 03d7 90       		.align 2
+ 599              		.globl	_ZN13LaplaceSolver8timeStepEdi
+ 601              	_ZN13LaplaceSolver8timeStepEdi:
+ 602              	.LFB2340:
+ 603              		.cfi_startproc
+ 604 03d8 55       		pushq	%rbp	#
+ 605              		.cfi_def_cfa_offset 16
+ 606              		.cfi_offset 6, -16
+ 607 03d9 4889E5   		movq	%rsp, %rbp	#,
+ 608              		.cfi_def_cfa_register 6
+ 609 03dc 4881EC90 		subq	$144, %rsp	#,
+ 609      000000
+ 610 03e3 48897D88 		movq	%rdi, -120(%rbp)	# this, this
+ 611 03e7 F20F1145 		movsd	%xmm0, -128(%rbp)	# dt, dt
+ 611      80
+ 612 03ec 89B57CFF 		movl	%esi, -132(%rbp)	# step_size_i, step_size_i
+ 612      FFFF
+ 613              	# laplacev4.cpp:114: {
+ 614 03f2 64488B04 		movq	%fs:40, %rax	# MEM[(<address-space-1> long unsigned int *)40B], tmp260
+ 614      25280000 
+ 614      00
+ 615 03fb 488945F8 		movq	%rax, -8(%rbp)	# tmp260, D.59843
+ 616 03ff 31C0     		xorl	%eax, %eax	# tmp260
+ 617              	# laplacev4.cpp:115: 	int step_size = step_size_i-1;
+ 618 0401 8B857CFF 		movl	-132(%rbp), %eax	# step_size_i, tmp173
+ 618      FFFF
+ 619 0407 83E801   		subl	$1, %eax	#, tmp172
+ 620 040a 8945B0   		movl	%eax, -80(%rbp)	# tmp172, step_size
+ 621              	# laplacev4.cpp:116: 	Real dx2 = g->dx*g->dx;
+ 622 040d 488B4588 		movq	-120(%rbp), %rax	# this, tmp174
+ 623 0411 488B00   		movq	(%rax), %rax	# this_101(D)->g, _1
+ 624              	# laplacev4.cpp:116: 	Real dx2 = g->dx*g->dx;
+ 625 0414 F20F1008 		movsd	(%rax), %xmm1	# _1->dx, _2
+ 626              	# laplacev4.cpp:116: 	Real dx2 = g->dx*g->dx;
+ 627 0418 488B4588 		movq	-120(%rbp), %rax	# this, tmp175
+ 628 041c 488B00   		movq	(%rax), %rax	# this_101(D)->g, _3
+ 629              	# laplacev4.cpp:116: 	Real dx2 = g->dx*g->dx;
+ 630 041f F20F1000 		movsd	(%rax), %xmm0	# _3->dx, _4
+ 631              	# laplacev4.cpp:116: 	Real dx2 = g->dx*g->dx;
+ 632 0423 F20F59C1 		mulsd	%xmm1, %xmm0	# _2, tmp176
+ 633 0427 F20F1145 		movsd	%xmm0, -40(%rbp)	# tmp176, dx2
+ 633      D8
+ 634              	# laplacev4.cpp:117: 	Real dy2 = g->dy*g->dy;
+ 635 042c 488B4588 		movq	-120(%rbp), %rax	# this, tmp177
+ 636 0430 488B00   		movq	(%rax), %rax	# this_101(D)->g, _5
+ 637              	# laplacev4.cpp:117: 	Real dy2 = g->dy*g->dy;
+ 638 0433 F20F1048 		movsd	8(%rax), %xmm1	# _5->dy, _6
+ 638      08
+ 639              	# laplacev4.cpp:117: 	Real dy2 = g->dy*g->dy;
+ 640 0438 488B4588 		movq	-120(%rbp), %rax	# this, tmp178
+ 641 043c 488B00   		movq	(%rax), %rax	# this_101(D)->g, _7
+ 642              	# laplacev4.cpp:117: 	Real dy2 = g->dy*g->dy;
+ 643 043f F20F1040 		movsd	8(%rax), %xmm0	# _7->dy, _8
+ 643      08
+ 644              	# laplacev4.cpp:117: 	Real dy2 = g->dy*g->dy;
+ 645 0444 F20F59C1 		mulsd	%xmm1, %xmm0	# _6, tmp179
+ 646 0448 F20F1145 		movsd	%xmm0, -32(%rbp)	# tmp179, dy2
+ 646      E0
+ 647              	# laplacev4.cpp:119: 	Real err = 0.0;
+ 648 044d 660FEFC0 		pxor	%xmm0, %xmm0	# tmp180
+ 649 0451 F20F1145 		movsd	%xmm0, -48(%rbp)	# tmp180, err
+ 649      D0
+ 650              	# laplacev4.cpp:120: 	int nx = g->nx;
+ 651 0456 488B4588 		movq	-120(%rbp), %rax	# this, tmp181
+ 652 045a 488B00   		movq	(%rax), %rax	# this_101(D)->g, _9
+ 653              	# laplacev4.cpp:120: 	int nx = g->nx;
+ 654 045d 8B4010   		movl	16(%rax), %eax	# _9->nx, tmp182
+ 655 0460 8945B4   		movl	%eax, -76(%rbp)	# tmp182, nx
+ 656              	# laplacev4.cpp:121: 	int ny = g->ny;
+ 657 0463 488B4588 		movq	-120(%rbp), %rax	# this, tmp183
+ 658 0467 488B00   		movq	(%rax), %rax	# this_101(D)->g, _10
+ 659              	# laplacev4.cpp:121: 	int ny = g->ny;
+ 660 046a 8B4014   		movl	20(%rax), %eax	# _10->ny, tmp184
+ 661 046d 8945B8   		movl	%eax, -72(%rbp)	# tmp184, ny
+ 662              	# laplacev4.cpp:122: 	Real *u = g->u;
+ 663 0470 488B4588 		movq	-120(%rbp), %rax	# this, tmp185
+ 664 0474 488B00   		movq	(%rax), %rax	# this_101(D)->g, _11
+ 665              	# laplacev4.cpp:122: 	Real *u = g->u;
+ 666 0477 488B4018 		movq	24(%rax), %rax	# _11->u, tmp186
+ 667 047b 488945E8 		movq	%rax, -24(%rbp)	# tmp186, u
+ 668              	# laplacev4.cpp:124: 	for (int s=0;s<step_size;s++){
+ 669 047f C7459C00 		movl	$0, -100(%rbp)	#, s
+ 669      000000
+ 670              	# laplacev4.cpp:124: 	for (int s=0;s<step_size;s++){
+ 671 0486 E90F0100 		jmp	.L29	#
+ 671      00
+ 672              	.L34:
+ 673              	# laplacev4.cpp:125: 		for (int i=1; i<nx-1; ++i) {
+ 674 048b C745A001 		movl	$1, -96(%rbp)	#, i
+ 674      000000
+ 675              	# laplacev4.cpp:125: 		for (int i=1; i<nx-1; ++i) {
+ 676 0492 E9F00000 		jmp	.L30	#
+ 676      00
+ 677              	.L33:
+ 678              	# laplacev4.cpp:126: 			subscript = nx*i;
+ 679 0497 8B45B4   		movl	-76(%rbp), %eax	# nx, tmp188
+ 680 049a 0FAF45A0 		imull	-96(%rbp), %eax	# i, tmp187
+ 681 049e 8945BC   		movl	%eax, -68(%rbp)	# tmp187, subscript
+ 682              	# laplacev4.cpp:127: 			subscript_m = subscript -nx;
+ 683 04a1 8B45BC   		movl	-68(%rbp), %eax	# subscript, tmp192
+ 684 04a4 2B45B4   		subl	-76(%rbp), %eax	# nx, tmp191
+ 685 04a7 8945C0   		movl	%eax, -64(%rbp)	# tmp191, subscript_m
+ 686              	# laplacev4.cpp:128: 			subscript_p = subscript + nx;
+ 687 04aa 8B55BC   		movl	-68(%rbp), %edx	# subscript, tmp197
+ 688 04ad 8B45B4   		movl	-76(%rbp), %eax	# nx, tmp198
+ 689 04b0 01D0     		addl	%edx, %eax	# tmp197, tmp196
+ 690 04b2 8945C4   		movl	%eax, -60(%rbp)	# tmp196, subscript_p
+ 691              	# laplacev4.cpp:129: 			for (int j=1; j<ny-1; ++j) {
+ 692 04b5 C745A401 		movl	$1, -92(%rbp)	#, j
+ 692      000000
+ 693              	# laplacev4.cpp:129: 			for (int j=1; j<ny-1; ++j) {
+ 694 04bc E9B30000 		jmp	.L31	#
+ 694      00
+ 695              	.L32:
+ 696              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 697 04c1 8B55C0   		movl	-64(%rbp), %edx	# subscript_m, tmp199
+ 698 04c4 8B45A4   		movl	-92(%rbp), %eax	# j, tmp200
+ 699 04c7 01D0     		addl	%edx, %eax	# tmp199, _12
+ 700 04c9 4898     		cltq
+ 701              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 702 04cb 488D14C5 		leaq	0(,%rax,8), %rdx	#, _14
+ 702      00000000 
+ 703 04d3 488B45E8 		movq	-24(%rbp), %rax	# u, tmp201
+ 704 04d7 4801D0   		addq	%rdx, %rax	# _14, _15
+ 705 04da F20F1008 		movsd	(%rax), %xmm1	# *_15, _16
+ 706              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 707 04de 8B55C4   		movl	-60(%rbp), %edx	# subscript_p, tmp202
+ 708 04e1 8B45A4   		movl	-92(%rbp), %eax	# j, tmp203
+ 709 04e4 01D0     		addl	%edx, %eax	# tmp202, _17
+ 710 04e6 4898     		cltq
+ 711              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 712 04e8 488D14C5 		leaq	0(,%rax,8), %rdx	#, _19
+ 712      00000000 
+ 713 04f0 488B45E8 		movq	-24(%rbp), %rax	# u, tmp204
+ 714 04f4 4801D0   		addq	%rdx, %rax	# _19, _20
+ 715 04f7 F20F1000 		movsd	(%rax), %xmm0	# *_20, _21
+ 716              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 717 04fb F20F58C8 		addsd	%xmm0, %xmm1	# _21, _22
+ 718              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 719 04ff 8B45A4   		movl	-92(%rbp), %eax	# j, tmp205
+ 720 0502 8D50FF   		leal	-1(%rax), %edx	#, _23
+ 721              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 722 0505 8B45BC   		movl	-68(%rbp), %eax	# subscript, tmp206
+ 723 0508 01D0     		addl	%edx, %eax	# _23, _24
+ 724 050a 4898     		cltq
+ 725              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 726 050c 488D14C5 		leaq	0(,%rax,8), %rdx	#, _26
+ 726      00000000 
+ 727 0514 488B45E8 		movq	-24(%rbp), %rax	# u, tmp207
+ 728 0518 4801D0   		addq	%rdx, %rax	# _26, _27
+ 729 051b F20F1010 		movsd	(%rax), %xmm2	# *_27, _28
+ 730              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 731 051f 8B45A4   		movl	-92(%rbp), %eax	# j, tmp208
+ 732 0522 8D5001   		leal	1(%rax), %edx	#, _29
+ 733              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 734 0525 8B45BC   		movl	-68(%rbp), %eax	# subscript, tmp209
+ 735 0528 01D0     		addl	%edx, %eax	# _29, _30
+ 736 052a 4898     		cltq
+ 737              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 738 052c 488D14C5 		leaq	0(,%rax,8), %rdx	#, _32
+ 738      00000000 
+ 739 0534 488B45E8 		movq	-24(%rbp), %rax	# u, tmp210
+ 740 0538 4801D0   		addq	%rdx, %rax	# _32, _33
+ 741 053b F20F1000 		movsd	(%rax), %xmm0	# *_33, _34
+ 742              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 743 053f F20F58C2 		addsd	%xmm2, %xmm0	# _28, _35
+ 744              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 745 0543 F20F58C8 		addsd	%xmm0, %xmm1	# _35, _36
+ 746              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 747 0547 8B55BC   		movl	-68(%rbp), %edx	# subscript, tmp211
+ 748 054a 8B45A4   		movl	-92(%rbp), %eax	# j, tmp212
+ 749 054d 01D0     		addl	%edx, %eax	# tmp211, _37
+ 750 054f 4898     		cltq
+ 751              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 752 0551 488D14C5 		leaq	0(,%rax,8), %rdx	#, _39
+ 752      00000000 
+ 753 0559 488B45E8 		movq	-24(%rbp), %rax	# u, tmp213
+ 754 055d 4801D0   		addq	%rdx, %rax	# _39, _40
+ 755              	# laplacev4.cpp:131: 						(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 756 0560 F20F1005 		movsd	.LC6(%rip), %xmm0	#, tmp214
+ 756      00000000 
+ 757 0568 F20F59C1 		mulsd	%xmm1, %xmm0	# _36, _41
+ 758              	# laplacev4.cpp:130: 				u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 759 056c F20F1100 		movsd	%xmm0, (%rax)	# _41, *_40
+ 760              	# laplacev4.cpp:129: 			for (int j=1; j<ny-1; ++j) {
+ 761 0570 8345A401 		addl	$1, -92(%rbp)	#, j
+ 762              	.L31:
+ 763              	# laplacev4.cpp:129: 			for (int j=1; j<ny-1; ++j) {
+ 764 0574 8B45B8   		movl	-72(%rbp), %eax	# ny, tmp215
+ 765 0577 83E801   		subl	$1, %eax	#, _42
+ 766              	# laplacev4.cpp:129: 			for (int j=1; j<ny-1; ++j) {
+ 767 057a 3945A4   		cmpl	%eax, -92(%rbp)	# _42, j
+ 768 057d 0F8C3EFF 		jl	.L32	#,
+ 768      FFFF
+ 769              	# laplacev4.cpp:125: 		for (int i=1; i<nx-1; ++i) {
+ 770 0583 8345A001 		addl	$1, -96(%rbp)	#, i
+ 771              	.L30:
+ 772              	# laplacev4.cpp:125: 		for (int i=1; i<nx-1; ++i) {
+ 773 0587 8B45B4   		movl	-76(%rbp), %eax	# nx, tmp216
+ 774 058a 83E801   		subl	$1, %eax	#, _43
+ 775              	# laplacev4.cpp:125: 		for (int i=1; i<nx-1; ++i) {
+ 776 058d 3945A0   		cmpl	%eax, -96(%rbp)	# _43, i
+ 777 0590 0F8C01FF 		jl	.L33	#,
+ 777      FFFF
+ 778              	# laplacev4.cpp:124: 	for (int s=0;s<step_size;s++){
+ 779 0596 83459C01 		addl	$1, -100(%rbp)	#, s
+ 780              	.L29:
+ 781              	# laplacev4.cpp:124: 	for (int s=0;s<step_size;s++){
+ 782 059a 8B459C   		movl	-100(%rbp), %eax	# s, tmp217
+ 783 059d 3B45B0   		cmpl	-80(%rbp), %eax	# step_size, tmp217
+ 784 05a0 0F8CE5FE 		jl	.L34	#,
+ 784      FFFF
+ 785              	# laplacev4.cpp:135: 	for (int i=1; i<nx-1; ++i) {
+ 786 05a6 C745A801 		movl	$1, -88(%rbp)	#, i
+ 786      000000
+ 787              	# laplacev4.cpp:135: 	for (int i=1; i<nx-1; ++i) {
+ 788 05ad E9530100 		jmp	.L35	#
+ 788      00
+ 789              	.L38:
+ 790              	# laplacev4.cpp:136: 		subscript = nx*i;
+ 791 05b2 8B45B4   		movl	-76(%rbp), %eax	# nx, tmp219
+ 792 05b5 0FAF45A8 		imull	-88(%rbp), %eax	# i, tmp218
+ 793 05b9 8945BC   		movl	%eax, -68(%rbp)	# tmp218, subscript
+ 794              	# laplacev4.cpp:137: 		subscript_m = subscript -nx;
+ 795 05bc 8B45BC   		movl	-68(%rbp), %eax	# subscript, tmp223
+ 796 05bf 2B45B4   		subl	-76(%rbp), %eax	# nx, tmp222
+ 797 05c2 8945C0   		movl	%eax, -64(%rbp)	# tmp222, subscript_m
+ 798              	# laplacev4.cpp:138: 		subscript_p = subscript + nx;
+ 799 05c5 8B55BC   		movl	-68(%rbp), %edx	# subscript, tmp228
+ 800 05c8 8B45B4   		movl	-76(%rbp), %eax	# nx, tmp229
+ 801 05cb 01D0     		addl	%edx, %eax	# tmp228, tmp227
+ 802 05cd 8945C4   		movl	%eax, -60(%rbp)	# tmp227, subscript_p
+ 803              	# laplacev4.cpp:139: 		for (int j=1; j<ny-1; ++j) {
+ 804 05d0 C745AC01 		movl	$1, -84(%rbp)	#, j
+ 804      000000
+ 805              	# laplacev4.cpp:139: 		for (int j=1; j<ny-1; ++j) {
+ 806 05d7 E9160100 		jmp	.L36	#
+ 806      00
+ 807              	.L37:
+ 808              	# laplacev4.cpp:140: 			tmp = u[(subscript +j)];
+ 809 05dc 8B55BC   		movl	-68(%rbp), %edx	# subscript, tmp230
+ 810 05df 8B45AC   		movl	-84(%rbp), %eax	# j, tmp231
+ 811 05e2 01D0     		addl	%edx, %eax	# tmp230, _44
+ 812 05e4 4898     		cltq
+ 813              	# laplacev4.cpp:140: 			tmp = u[(subscript +j)];
+ 814 05e6 488D14C5 		leaq	0(,%rax,8), %rdx	#, _46
+ 814      00000000 
+ 815 05ee 488B45E8 		movq	-24(%rbp), %rax	# u, tmp232
+ 816 05f2 4801D0   		addq	%rdx, %rax	# _46, _47
+ 817              	# laplacev4.cpp:140: 			tmp = u[(subscript +j)];
+ 818 05f5 F20F1000 		movsd	(%rax), %xmm0	# *_47, tmp233
+ 819 05f9 F20F1145 		movsd	%xmm0, -16(%rbp)	# tmp233, tmp
+ 819      F0
+ 820              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 821 05fe 8B55C0   		movl	-64(%rbp), %edx	# subscript_m, tmp234
+ 822 0601 8B45AC   		movl	-84(%rbp), %eax	# j, tmp235
+ 823 0604 01D0     		addl	%edx, %eax	# tmp234, _48
+ 824 0606 4898     		cltq
+ 825              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 826 0608 488D14C5 		leaq	0(,%rax,8), %rdx	#, _50
+ 826      00000000 
+ 827 0610 488B45E8 		movq	-24(%rbp), %rax	# u, tmp236
+ 828 0614 4801D0   		addq	%rdx, %rax	# _50, _51
+ 829 0617 F20F1008 		movsd	(%rax), %xmm1	# *_51, _52
+ 830              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 831 061b 8B55C4   		movl	-60(%rbp), %edx	# subscript_p, tmp237
+ 832 061e 8B45AC   		movl	-84(%rbp), %eax	# j, tmp238
+ 833 0621 01D0     		addl	%edx, %eax	# tmp237, _53
+ 834 0623 4898     		cltq
+ 835              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 836 0625 488D14C5 		leaq	0(,%rax,8), %rdx	#, _55
+ 836      00000000 
+ 837 062d 488B45E8 		movq	-24(%rbp), %rax	# u, tmp239
+ 838 0631 4801D0   		addq	%rdx, %rax	# _55, _56
+ 839 0634 F20F1000 		movsd	(%rax), %xmm0	# *_56, _57
+ 840              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 841 0638 F20F58C8 		addsd	%xmm0, %xmm1	# _57, _58
+ 842              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 843 063c 8B45AC   		movl	-84(%rbp), %eax	# j, tmp240
+ 844 063f 8D50FF   		leal	-1(%rax), %edx	#, _59
+ 845              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 846 0642 8B45BC   		movl	-68(%rbp), %eax	# subscript, tmp241
+ 847 0645 01D0     		addl	%edx, %eax	# _59, _60
+ 848 0647 4898     		cltq
+ 849              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 850 0649 488D14C5 		leaq	0(,%rax,8), %rdx	#, _62
+ 850      00000000 
+ 851 0651 488B45E8 		movq	-24(%rbp), %rax	# u, tmp242
+ 852 0655 4801D0   		addq	%rdx, %rax	# _62, _63
+ 853 0658 F20F1010 		movsd	(%rax), %xmm2	# *_63, _64
+ 854              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 855 065c 8B45AC   		movl	-84(%rbp), %eax	# j, tmp243
+ 856 065f 8D5001   		leal	1(%rax), %edx	#, _65
+ 857              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 858 0662 8B45BC   		movl	-68(%rbp), %eax	# subscript, tmp244
+ 859 0665 01D0     		addl	%edx, %eax	# _65, _66
+ 860 0667 4898     		cltq
+ 861              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 862 0669 488D14C5 		leaq	0(,%rax,8), %rdx	#, _68
+ 862      00000000 
+ 863 0671 488B45E8 		movq	-24(%rbp), %rax	# u, tmp245
+ 864 0675 4801D0   		addq	%rdx, %rax	# _68, _69
+ 865 0678 F20F1000 		movsd	(%rax), %xmm0	# *_69, _70
+ 866              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 867 067c F20F58C2 		addsd	%xmm2, %xmm0	# _64, _71
+ 868              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 869 0680 F20F58C8 		addsd	%xmm0, %xmm1	# _71, _72
+ 870              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 871 0684 8B55BC   		movl	-68(%rbp), %edx	# subscript, tmp246
+ 872 0687 8B45AC   		movl	-84(%rbp), %eax	# j, tmp247
+ 873 068a 01D0     		addl	%edx, %eax	# tmp246, _73
+ 874 068c 4898     		cltq
+ 875              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 876 068e 488D14C5 		leaq	0(,%rax,8), %rdx	#, _75
+ 876      00000000 
+ 877 0696 488B45E8 		movq	-24(%rbp), %rax	# u, tmp248
+ 878 069a 4801D0   		addq	%rdx, %rax	# _75, _76
+ 879              	# laplacev4.cpp:142: 					(u[subscript + (j-1)] + u[ subscript + (j+1)] ))*0.25;
+ 880 069d F20F1005 		movsd	.LC6(%rip), %xmm0	#, tmp249
+ 880      00000000 
+ 881 06a5 F20F59C1 		mulsd	%xmm1, %xmm0	# _72, _77
+ 882              	# laplacev4.cpp:141: 			u[(subscript +j)] = ((u[subscript_m + j] + u[subscript_p +j] ) +
+ 883 06a9 F20F1100 		movsd	%xmm0, (%rax)	# _77, *_76
+ 884              	# laplacev4.cpp:143: 			err += SQR(u[(subscript +j)] - tmp);
+ 885 06ad 8B55BC   		movl	-68(%rbp), %edx	# subscript, tmp250
+ 886 06b0 8B45AC   		movl	-84(%rbp), %eax	# j, tmp251
+ 887 06b3 01D0     		addl	%edx, %eax	# tmp250, _78
+ 888 06b5 4898     		cltq
+ 889              	# laplacev4.cpp:143: 			err += SQR(u[(subscript +j)] - tmp);
+ 890 06b7 488D14C5 		leaq	0(,%rax,8), %rdx	#, _80
+ 890      00000000 
+ 891 06bf 488B45E8 		movq	-24(%rbp), %rax	# u, tmp252
+ 892 06c3 4801D0   		addq	%rdx, %rax	# _80, _81
+ 893 06c6 F20F1000 		movsd	(%rax), %xmm0	# *_81, _82
+ 894              	# laplacev4.cpp:143: 			err += SQR(u[(subscript +j)] - tmp);
+ 895 06ca F20F5C45 		subsd	-16(%rbp), %xmm0	# tmp, _83
+ 895      F0
+ 896 06cf F20F1145 		movsd	%xmm0, -56(%rbp)	# _83, D.52314
+ 896      C8
+ 897              	# laplacev4.cpp:143: 			err += SQR(u[(subscript +j)] - tmp);
+ 898 06d4 488D45C8 		leaq	-56(%rbp), %rax	#, tmp253
+ 899 06d8 4889C7   		movq	%rax, %rdi	# tmp253,
+ 900 06db E8000000 		call	_Z3SQRRKd	#
+ 900      00
+ 901              	# laplacev4.cpp:143: 			err += SQR(u[(subscript +j)] - tmp);
+ 902 06e0 F20F104D 		movsd	-48(%rbp), %xmm1	# err, tmp255
+ 902      D0
+ 903 06e5 F20F58C1 		addsd	%xmm1, %xmm0	# tmp255, tmp254
+ 904 06e9 F20F1145 		movsd	%xmm0, -48(%rbp)	# tmp254, err
+ 904      D0
+ 905              	# laplacev4.cpp:139: 		for (int j=1; j<ny-1; ++j) {
+ 906 06ee 8345AC01 		addl	$1, -84(%rbp)	#, j
+ 907              	.L36:
+ 908              	# laplacev4.cpp:139: 		for (int j=1; j<ny-1; ++j) {
+ 909 06f2 8B45B8   		movl	-72(%rbp), %eax	# ny, tmp256
+ 910 06f5 83E801   		subl	$1, %eax	#, _84
+ 911              	# laplacev4.cpp:139: 		for (int j=1; j<ny-1; ++j) {
+ 912 06f8 3945AC   		cmpl	%eax, -84(%rbp)	# _84, j
+ 913 06fb 0F8CDBFE 		jl	.L37	#,
+ 913      FFFF
+ 914              	# laplacev4.cpp:135: 	for (int i=1; i<nx-1; ++i) {
+ 915 0701 8345A801 		addl	$1, -88(%rbp)	#, i
+ 916              	.L35:
+ 917              	# laplacev4.cpp:135: 	for (int i=1; i<nx-1; ++i) {
+ 918 0705 8B45B4   		movl	-76(%rbp), %eax	# nx, tmp257
+ 919 0708 83E801   		subl	$1, %eax	#, _85
+ 920              	# laplacev4.cpp:135: 	for (int i=1; i<nx-1; ++i) {
+ 921 070b 3945A8   		cmpl	%eax, -88(%rbp)	# _85, i
+ 922 070e 0F8C9EFE 		jl	.L38	#,
+ 922      FFFF
+ 923              	# laplacev4.cpp:146: 	return sqrt(err);
+ 924 0714 488B45D0 		movq	-48(%rbp), %rax	# err, tmp258
+ 925 0718 66480F6E 		movq	%rax, %xmm0	# tmp258,
+ 925      C0
+ 926 071d E8000000 		call	sqrt@PLT	#
+ 926      00
+ 927 0722 66480F7E 		movq	%xmm0, %rax	#, _111
+ 927      C0
+ 928              	# laplacev4.cpp:147: }
+ 929 0727 488B55F8 		movq	-8(%rbp), %rdx	# D.59843, tmp261
+ 930 072b 64482B14 		subq	%fs:40, %rdx	# MEM[(<address-space-1> long unsigned int *)40B], tmp261
+ 930      25280000 
+ 930      00
+ 931 0734 7405     		je	.L40	#,
+ 932 0736 E8000000 		call	__stack_chk_fail@PLT	#
+ 932      00
+ 933              	.L40:
+ 934 073b 66480F6E 		movq	%rax, %xmm0	# <retval>,
+ 934      C0
+ 935 0740 C9       		leave	
+ 936              		.cfi_def_cfa 7, 8
+ 937 0741 C3       		ret	
+ 938              		.cfi_endproc
+ 939              	.LFE2340:
+ 941              		.align 2
+ 942              		.globl	_ZN13LaplaceSolver5solveEid
+ 944              	_ZN13LaplaceSolver5solveEid:
+ 945              	.LFB2341:
+ 946              		.cfi_startproc
+ 947 0742 55       		pushq	%rbp	#
+ 948              		.cfi_def_cfa_offset 16
+ 949              		.cfi_offset 6, -16
+ 950 0743 4889E5   		movq	%rsp, %rbp	#,
+ 951              		.cfi_def_cfa_register 6
+ 952 0746 4883EC40 		subq	$64, %rsp	#,
+ 953 074a 48897DD8 		movq	%rdi, -40(%rbp)	# this, this
+ 954 074e 8975D4   		movl	%esi, -44(%rbp)	# n_iter, n_iter
+ 955 0751 F20F1145 		movsd	%xmm0, -56(%rbp)	# eps, eps
+ 955      C8
+ 956              	# laplacev4.cpp:151: 	int count = 1;
+ 957 0756 C745EC01 		movl	$1, -20(%rbp)	#, count
+ 957      000000
+ 958              	# laplacev4.cpp:152: 	int step_size = 5;
+ 959 075d C745F005 		movl	$5, -16(%rbp)	#, step_size
+ 959      000000
+ 960              	# laplacev4.cpp:153: 	int max_iter = n_iter/step_size;
+ 961 0764 8B45D4   		movl	-44(%rbp), %eax	# n_iter, tmp87
+ 962 0767 99       		cltd
+ 963 0768 F77DF0   		idivl	-16(%rbp)	# step_size
+ 964 076b 8945F4   		movl	%eax, -12(%rbp)	# tmp85, max_iter
+ 965              	# laplacev4.cpp:154: 	Real err = timeStep(0.0,step_size);
+ 966 076e 8B55F0   		movl	-16(%rbp), %edx	# step_size, tmp88
+ 967 0771 488B45D8 		movq	-40(%rbp), %rax	# this, tmp89
+ 968 0775 89D6     		movl	%edx, %esi	# tmp88,
+ 969 0777 488B1500 		movq	.LC5(%rip), %rdx	#, tmp90
+ 969      000000
+ 970 077e 66480F6E 		movq	%rdx, %xmm0	# tmp90,
+ 970      C2
+ 971 0783 4889C7   		movq	%rax, %rdi	# tmp89,
+ 972 0786 E8000000 		call	_ZN13LaplaceSolver8timeStepEdi	#
+ 972      00
+ 973 078b 66480F7E 		movq	%xmm0, %rax	#, tmp91
+ 973      C0
+ 974 0790 488945F8 		movq	%rax, -8(%rbp)	# tmp91, err
+ 975              	# laplacev4.cpp:155: 	while (err > eps) {
+ 976 0794 EB3F     		jmp	.L42	#
+ 977              	.L45:
+ 978              	# laplacev4.cpp:156: 		if (n_iter && (count >= max_iter)) {
+ 979 0796 837DD400 		cmpl	$0, -44(%rbp)	#, n_iter
+ 980 079a 740F     		je	.L43	#,
+ 981              	# laplacev4.cpp:156: 		if (n_iter && (count >= max_iter)) {
+ 982 079c 8B45EC   		movl	-20(%rbp), %eax	# count, tmp92
+ 983 079f 3B45F4   		cmpl	-12(%rbp), %eax	# max_iter, tmp92
+ 984 07a2 7C07     		jl	.L43	#,
+ 985              	# laplacev4.cpp:157: 			return err;
+ 986 07a4 F20F1045 		movsd	-8(%rbp), %xmm0	# err, _3
+ 986      F8
+ 987 07a9 EB3F     		jmp	.L44	#
+ 988              	.L43:
+ 989              	# laplacev4.cpp:159: 		err = timeStep(0.0,step_size);
+ 990 07ab 8B55F0   		movl	-16(%rbp), %edx	# step_size, tmp93
+ 991 07ae 488B45D8 		movq	-40(%rbp), %rax	# this, tmp94
+ 992 07b2 89D6     		movl	%edx, %esi	# tmp93,
+ 993 07b4 488B1500 		movq	.LC5(%rip), %rdx	#, tmp95
+ 993      000000
+ 994 07bb 66480F6E 		movq	%rdx, %xmm0	# tmp95,
+ 994      C2
+ 995 07c0 4889C7   		movq	%rax, %rdi	# tmp94,
+ 996 07c3 E8000000 		call	_ZN13LaplaceSolver8timeStepEdi	#
+ 996      00
+ 997 07c8 66480F7E 		movq	%xmm0, %rax	#, tmp96
+ 997      C0
+ 998 07cd 488945F8 		movq	%rax, -8(%rbp)	# tmp96, err
+ 999              	# laplacev4.cpp:160: 		++count;
+ 1000 07d1 8345EC01 		addl	$1, -20(%rbp)	#, count
+ 1001              	.L42:
+ 1002              	# laplacev4.cpp:155: 	while (err > eps) {
+ 1003 07d5 F20F1045 		movsd	-8(%rbp), %xmm0	# err, tmp97
+ 1003      F8
+ 1004 07da 660F2F45 		comisd	-56(%rbp), %xmm0	# eps, tmp97
+ 1004      C8
+ 1005 07df 77B5     		ja	.L45	#,
+ 1006              	# laplacev4.cpp:162: 	return Real(count);
+ 1007 07e1 660FEFC0 		pxor	%xmm0, %xmm0	# _3
+ 1008 07e5 F20F2A45 		cvtsi2sdl	-20(%rbp), %xmm0	# count, _3
+ 1008      EC
+ 1009              	.L44:
+ 1010              	# laplacev4.cpp:163: }
+ 1011 07ea 66480F7E 		movq	%xmm0, %rax	# _3, <retval>
+ 1011      C0
+ 1012 07ef 66480F6E 		movq	%rax, %xmm0	# <retval>,
+ 1012      C0
+ 1013 07f4 C9       		leave	
+ 1014              		.cfi_def_cfa 7, 8
+ 1015 07f5 C3       		ret	
+ 1016              		.cfi_endproc
+ 1017              	.LFE2341:
+ 1019              		.section	.rodata
+ 1020              	.LC7:
+ 1021 0008 456E7465 		.string	"Enter nx n_iter eps --> "
+ 1021      72206E78 
+ 1021      206E5F69 
+ 1021      74657220 
+ 1021      65707320 
+ 1022              	.LC8:
+ 1023 0021 6E78203D 		.string	"nx = "
+ 1023      2000
+ 1024              	.LC9:
+ 1025 0027 2C206E79 		.string	", ny = "
+ 1025      203D2000 
+ 1026              	.LC10:
+ 1027 002f 2C206E5F 		.string	", n_iter = "
+ 1027      69746572 
+ 1027      203D2000 
+ 1028              	.LC11:
+ 1029 003b 2C206570 		.string	", eps = "
+ 1029      73203D20 
+ 1029      00
+ 1030              	.LC12:
+ 1031 0044 49746572 		.string	"Iterations took "
+ 1031      6174696F 
+ 1031      6E732074 
+ 1031      6F6F6B20 
+ 1031      00
+ 1032              	.LC13:
+ 1033 0055 7365636F 		.string	"seconds.\n"
+ 1033      6E64732E 
+ 1033      0A00
+ 1034              		.text
+ 1035              		.globl	main
+ 1037              	main:
+ 1038              	.LFB2342:
+ 1039              		.cfi_startproc
+ 1040              		.cfi_personality 0x9b,DW.ref.__gxx_personality_v0
+ 1041              		.cfi_lsda 0x1b,.LLSDA2342
+ 1042 07f6 55       		pushq	%rbp	#
+ 1043              		.cfi_def_cfa_offset 16
+ 1044              		.cfi_offset 6, -16
+ 1045 07f7 4889E5   		movq	%rsp, %rbp	#,
+ 1046              		.cfi_def_cfa_register 6
+ 1047 07fa 4154     		pushq	%r12	#
+ 1048 07fc 53       		pushq	%rbx	#
+ 1049 07fd 4883EC50 		subq	$80, %rsp	#,
+ 1050              		.cfi_offset 12, -24
+ 1051              		.cfi_offset 3, -32
+ 1052 0801 897DAC   		movl	%edi, -84(%rbp)	# argc, argc
+ 1053 0804 488975A0 		movq	%rsi, -96(%rbp)	# argv, argv
+ 1054              	# laplacev4.cpp:166: {
+ 1055 0808 64488B04 		movq	%fs:40, %rax	# MEM[(<address-space-1> long unsigned int *)40B], tmp145
+ 1055      25280000 
+ 1055      00
+ 1056 0811 488945E8 		movq	%rax, -24(%rbp)	# tmp145, D.59847
+ 1057 0815 31C0     		xorl	%eax, %eax	# tmp145
+ 1058              	# laplacev4.cpp:170: 	std::cout << "Enter nx n_iter eps --> ";
+ 1059 0817 488D0500 		leaq	.LC7(%rip), %rax	#, tmp110
+ 1059      000000
+ 1060 081e 4889C6   		movq	%rax, %rsi	# tmp110,
+ 1061 0821 488D0500 		leaq	_ZSt4cout(%rip), %rax	#, tmp111
+ 1061      000000
+ 1062 0828 4889C7   		movq	%rax, %rdi	# tmp111,
+ 1063              	.LEHB0:
+ 1064 082b E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1064      00
+ 1065              	# laplacev4.cpp:171: 	std::cin >> nx >> n_iter >> eps;
+ 1066 0830 488D45B8 		leaq	-72(%rbp), %rax	#, tmp112
+ 1067 0834 4889C6   		movq	%rax, %rsi	# tmp112,
+ 1068 0837 488D0500 		leaq	_ZSt3cin(%rip), %rax	#, tmp113
+ 1068      000000
+ 1069 083e 4889C7   		movq	%rax, %rdi	# tmp113,
+ 1070 0841 E8000000 		call	_ZNSirsERi@PLT	#
+ 1070      00
+ 1071 0846 4889C2   		movq	%rax, %rdx	#, _1
+ 1072              	# laplacev4.cpp:171: 	std::cin >> nx >> n_iter >> eps;
+ 1073 0849 488D45BC 		leaq	-68(%rbp), %rax	#, tmp114
+ 1074 084d 4889C6   		movq	%rax, %rsi	# tmp114,
+ 1075 0850 4889D7   		movq	%rdx, %rdi	# _1,
+ 1076 0853 E8000000 		call	_ZNSirsERi@PLT	#
+ 1076      00
+ 1077 0858 4889C2   		movq	%rax, %rdx	#, _2
+ 1078              	# laplacev4.cpp:171: 	std::cin >> nx >> n_iter >> eps;
+ 1079 085b 488D45C0 		leaq	-64(%rbp), %rax	#, tmp115
+ 1080 085f 4889C6   		movq	%rax, %rsi	# tmp115,
+ 1081 0862 4889D7   		movq	%rdx, %rdi	# _2,
+ 1082 0865 E8000000 		call	_ZNSirsERd@PLT	#
+ 1082      00
+ 1083              	# laplacev4.cpp:172: 	Grid *g = new Grid(nx, nx);
+ 1084 086a BF200000 		movl	$32, %edi	#,
+ 1084      00
+ 1085 086f E8000000 		call	_Znwm@PLT	#
+ 1085      00
+ 1086              	.LEHE0:
+ 1087 0874 4889C3   		movq	%rax, %rbx	# tmp116, _34
+ 1088 0877 8B55B8   		movl	-72(%rbp), %edx	# nx, nx.5_3
+ 1089 087a 8B45B8   		movl	-72(%rbp), %eax	# nx, nx.6_4
+ 1090 087d 89C6     		movl	%eax, %esi	# nx.6_4,
+ 1091 087f 4889DF   		movq	%rbx, %rdi	# _34,
+ 1092              	.LEHB1:
+ 1093 0882 E8000000 		call	_ZN4GridC1Eii	#
+ 1093      00
+ 1094              	.LEHE1:
+ 1095              	# laplacev4.cpp:172: 	Grid *g = new Grid(nx, nx);
+ 1096 0887 48895DD0 		movq	%rbx, -48(%rbp)	# _34, g
+ 1097              	# laplacev4.cpp:173: 	g->setBCFunc(BC);
+ 1098 088b 488B45D0 		movq	-48(%rbp), %rax	# g, tmp117
+ 1099 088f 488D1500 		leaq	_Z2BCdd(%rip), %rdx	#, tmp118
+ 1099      000000
+ 1100 0896 4889D6   		movq	%rdx, %rsi	# tmp118,
+ 1101 0899 4889C7   		movq	%rax, %rdi	# tmp117,
+ 1102              	.LEHB2:
+ 1103 089c E8000000 		call	_ZN4Grid9setBCFuncEPFdddE	#
+ 1103      00
+ 1104              	.LEHE2:
+ 1105              	# laplacev4.cpp:174: 	LaplaceSolver s = LaplaceSolver(g);
+ 1106 08a1 488B55D0 		movq	-48(%rbp), %rdx	# g, tmp119
+ 1107 08a5 488D45C8 		leaq	-56(%rbp), %rax	#, tmp120
+ 1108 08a9 4889D6   		movq	%rdx, %rsi	# tmp119,
+ 1109 08ac 4889C7   		movq	%rax, %rdi	# tmp120,
+ 1110 08af E8000000 		call	_ZN13LaplaceSolverC1EP4Grid	#
+ 1110      00
+ 1111              	# laplacev4.cpp:175: 	std::cout <<"nx = " << g->nx << ", ny = " << g->ny
+ 1112 08b4 488D0500 		leaq	.LC8(%rip), %rax	#, tmp121
+ 1112      000000
+ 1113 08bb 4889C6   		movq	%rax, %rsi	# tmp121,
+ 1114 08be 488D0500 		leaq	_ZSt4cout(%rip), %rax	#, tmp122
+ 1114      000000
+ 1115 08c5 4889C7   		movq	%rax, %rdi	# tmp122,
+ 1116              	.LEHB3:
+ 1117 08c8 E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1117      00
+ 1118 08cd 4889C2   		movq	%rax, %rdx	#, _5
+ 1119              	# laplacev4.cpp:175: 	std::cout <<"nx = " << g->nx << ", ny = " << g->ny
+ 1120 08d0 488B45D0 		movq	-48(%rbp), %rax	# g, tmp123
+ 1121 08d4 8B4010   		movl	16(%rax), %eax	# g_37->nx, _6
+ 1122 08d7 89C6     		movl	%eax, %esi	# _6,
+ 1123 08d9 4889D7   		movq	%rdx, %rdi	# _5,
+ 1124 08dc E8000000 		call	_ZNSolsEi@PLT	#
+ 1124      00
+ 1125              	# laplacev4.cpp:175: 	std::cout <<"nx = " << g->nx << ", ny = " << g->ny
+ 1126 08e1 4889C2   		movq	%rax, %rdx	#, _7
+ 1127 08e4 488D0500 		leaq	.LC9(%rip), %rax	#, tmp124
+ 1127      000000
+ 1128 08eb 4889C6   		movq	%rax, %rsi	# tmp124,
+ 1129 08ee 4889D7   		movq	%rdx, %rdi	# _7,
+ 1130 08f1 E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1130      00
+ 1131              	# laplacev4.cpp:175: 	std::cout <<"nx = " << g->nx << ", ny = " << g->ny
+ 1132 08f6 4889C2   		movq	%rax, %rdx	#, _8
+ 1133              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1134 08f9 488B45D0 		movq	-48(%rbp), %rax	# g, tmp125
+ 1135 08fd 8B4014   		movl	20(%rax), %eax	# g_37->ny, _9
+ 1136 0900 89C6     		movl	%eax, %esi	# _9,
+ 1137 0902 4889D7   		movq	%rdx, %rdi	# _8,
+ 1138 0905 E8000000 		call	_ZNSolsEi@PLT	#
+ 1138      00
+ 1139              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1140 090a 4889C2   		movq	%rax, %rdx	#, _10
+ 1141 090d 488D0500 		leaq	.LC10(%rip), %rax	#, tmp126
+ 1141      000000
+ 1142 0914 4889C6   		movq	%rax, %rsi	# tmp126,
+ 1143 0917 4889D7   		movq	%rdx, %rdi	# _10,
+ 1144 091a E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1144      00
+ 1145              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1146 091f 4889C2   		movq	%rax, %rdx	#, _11
+ 1147              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1148 0922 8B45BC   		movl	-68(%rbp), %eax	# n_iter, n_iter.7_12
+ 1149 0925 89C6     		movl	%eax, %esi	# n_iter.7_12,
+ 1150 0927 4889D7   		movq	%rdx, %rdi	# _11,
+ 1151 092a E8000000 		call	_ZNSolsEi@PLT	#
+ 1151      00
+ 1152              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1153 092f 4889C2   		movq	%rax, %rdx	#, _13
+ 1154 0932 488D0500 		leaq	.LC11(%rip), %rax	#, tmp127
+ 1154      000000
+ 1155 0939 4889C6   		movq	%rax, %rsi	# tmp127,
+ 1156 093c 4889D7   		movq	%rdx, %rdi	# _13,
+ 1157 093f E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1157      00
+ 1158              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1159 0944 4889C2   		movq	%rax, %rdx	#, _14
+ 1160              	# laplacev4.cpp:177: 		<<std::endl;
+ 1161 0947 488B45C0 		movq	-64(%rbp), %rax	# eps, eps.8_15
+ 1162              	# laplacev4.cpp:176: 		<< ", n_iter = " << n_iter << ", eps = "<<eps
+ 1163 094b 66480F6E 		movq	%rax, %xmm0	# eps.8_15,
+ 1163      C0
+ 1164 0950 4889D7   		movq	%rdx, %rdi	# _14,
+ 1165 0953 E8000000 		call	_ZNSolsEd@PLT	#
+ 1165      00
+ 1166              	# laplacev4.cpp:177: 		<<std::endl;
+ 1167 0958 488B1500 		movq	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GOTPCREL(%rip), %rdx	#, tmp129
+ 1167      000000
+ 1168 095f 4889D6   		movq	%rdx, %rsi	# tmp128,
+ 1169 0962 4889C7   		movq	%rax, %rdi	# _16,
+ 1170 0965 E8000000 		call	_ZNSolsEPFRSoS_E@PLT	#
+ 1170      00
+ 1171              	# laplacev4.cpp:178: 	t_start = seconds();
+ 1172 096a E8000000 		call	_Z7secondsv	#
+ 1172      00
+ 1173 096f 66480F7E 		movq	%xmm0, %rax	#, tmp130
+ 1173      C0
+ 1174 0974 488945D8 		movq	%rax, -40(%rbp)	# tmp130, t_start
+ 1175              	# laplacev4.cpp:179: 	std::cout << s.solve(n_iter, eps) << std::endl;
+ 1176 0978 488B4DC0 		movq	-64(%rbp), %rcx	# eps, eps.9_17
+ 1177 097c 8B55BC   		movl	-68(%rbp), %edx	# n_iter, n_iter.10_18
+ 1178 097f 488D45C8 		leaq	-56(%rbp), %rax	#, tmp131
+ 1179 0983 66480F6E 		movq	%rcx, %xmm0	# eps.9_17,
+ 1179      C1
+ 1180 0988 89D6     		movl	%edx, %esi	# n_iter.10_18,
+ 1181 098a 4889C7   		movq	%rax, %rdi	# tmp131,
+ 1182 098d E8000000 		call	_ZN13LaplaceSolver5solveEid	#
+ 1182      00
+ 1183 0992 66480F7E 		movq	%xmm0, %rax	#, _19
+ 1183      C0
+ 1184 0997 66480F6E 		movq	%rax, %xmm0	# _19,
+ 1184      C0
+ 1185 099c 488D0500 		leaq	_ZSt4cout(%rip), %rax	#, tmp132
+ 1185      000000
+ 1186 09a3 4889C7   		movq	%rax, %rdi	# tmp132,
+ 1187 09a6 E8000000 		call	_ZNSolsEd@PLT	#
+ 1187      00
+ 1188              	# laplacev4.cpp:179: 	std::cout << s.solve(n_iter, eps) << std::endl;
+ 1189 09ab 488B1500 		movq	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@GOTPCREL(%rip), %rdx	#, tmp134
+ 1189      000000
+ 1190 09b2 4889D6   		movq	%rdx, %rsi	# tmp133,
+ 1191 09b5 4889C7   		movq	%rax, %rdi	# _20,
+ 1192 09b8 E8000000 		call	_ZNSolsEPFRSoS_E@PLT	#
+ 1192      00
+ 1193              	# laplacev4.cpp:180: 	t_end = seconds();
+ 1194 09bd E8000000 		call	_Z7secondsv	#
+ 1194      00
+ 1195 09c2 66480F7E 		movq	%xmm0, %rax	#, tmp135
+ 1195      C0
+ 1196 09c7 488945E0 		movq	%rax, -32(%rbp)	# tmp135, t_end
+ 1197              	# laplacev4.cpp:181: 	std::cout << "Iterations took " << t_end - t_start << "seconds.\n";
+ 1198 09cb 488D0500 		leaq	.LC12(%rip), %rax	#, tmp136
+ 1198      000000
+ 1199 09d2 4889C6   		movq	%rax, %rsi	# tmp136,
+ 1200 09d5 488D0500 		leaq	_ZSt4cout(%rip), %rax	#, tmp137
+ 1200      000000
+ 1201 09dc 4889C7   		movq	%rax, %rdi	# tmp137,
+ 1202 09df E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1202      00
+ 1203 09e4 4889C2   		movq	%rax, %rdx	#, _21
+ 1204              	# laplacev4.cpp:181: 	std::cout << "Iterations took " << t_end - t_start << "seconds.\n";
+ 1205 09e7 F20F1045 		movsd	-32(%rbp), %xmm0	# t_end, tmp138
+ 1205      E0
+ 1206 09ec F20F5C45 		subsd	-40(%rbp), %xmm0	# t_start, tmp138
+ 1206      D8
+ 1207 09f1 66480F7E 		movq	%xmm0, %rax	# tmp138, _22
+ 1207      C0
+ 1208 09f6 66480F6E 		movq	%rax, %xmm0	# _22,
+ 1208      C0
+ 1209 09fb 4889D7   		movq	%rdx, %rdi	# _21,
+ 1210 09fe E8000000 		call	_ZNSolsEd@PLT	#
+ 1210      00
+ 1211              	# laplacev4.cpp:181: 	std::cout << "Iterations took " << t_end - t_start << "seconds.\n";
+ 1212 0a03 4889C2   		movq	%rax, %rdx	#, _23
+ 1213              	# laplacev4.cpp:181: 	std::cout << "Iterations took " << t_end - t_start << "seconds.\n";
+ 1214 0a06 488D0500 		leaq	.LC13(%rip), %rax	#, tmp139
+ 1214      000000
+ 1215 0a0d 4889C6   		movq	%rax, %rsi	# tmp139,
+ 1216 0a10 4889D7   		movq	%rdx, %rdi	# _23,
+ 1217 0a13 E8000000 		call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@PLT	#
+ 1217      00
+ 1218              	.LEHE3:
+ 1219              	# laplacev4.cpp:182: 	return 0;
+ 1220 0a18 BB000000 		movl	$0, %ebx	#, _70
+ 1220      00
+ 1221              	# laplacev4.cpp:183: }
+ 1222 0a1d 488D45C8 		leaq	-56(%rbp), %rax	#, tmp140
+ 1223 0a21 4889C7   		movq	%rax, %rdi	# tmp140,
+ 1224 0a24 E8000000 		call	_ZN13LaplaceSolverD1Ev	#
+ 1224      00
+ 1225 0a29 89D8     		movl	%ebx, %eax	# _70, <retval>
+ 1226 0a2b 488B55E8 		movq	-24(%rbp), %rdx	# D.59847, tmp146
+ 1227 0a2f 64482B14 		subq	%fs:40, %rdx	# MEM[(<address-space-1> long unsigned int *)40B], tmp146
+ 1227      25280000 
+ 1227      00
+ 1228 0a38 743C     		je	.L50	#,
+ 1229 0a3a EB35     		jmp	.L53	#
+ 1230              	.L51:
+ 1231              	# laplacev4.cpp:172: 	Grid *g = new Grid(nx, nx);
+ 1232 0a3c 4989C4   		movq	%rax, %r12	#, tmp142
+ 1233 0a3f BE200000 		movl	$32, %esi	#,
+ 1233      00
+ 1234 0a44 4889DF   		movq	%rbx, %rdi	# _34,
+ 1235 0a47 E8000000 		call	_ZdlPvm@PLT	#
+ 1235      00
+ 1236 0a4c 4C89E0   		movq	%r12, %rax	# tmp142, D.59845
+ 1237 0a4f 4889C7   		movq	%rax, %rdi	# D.59845,
+ 1238              	.LEHB4:
+ 1239 0a52 E8000000 		call	_Unwind_Resume@PLT	#
+ 1239      00
+ 1240              	.L52:
+ 1241              	# laplacev4.cpp:183: }
+ 1242 0a57 4889C3   		movq	%rax, %rbx	#, tmp144
+ 1243 0a5a 488D45C8 		leaq	-56(%rbp), %rax	#, tmp143
+ 1244 0a5e 4889C7   		movq	%rax, %rdi	# tmp143,
+ 1245 0a61 E8000000 		call	_ZN13LaplaceSolverD1Ev	#
+ 1245      00
+ 1246 0a66 4889D8   		movq	%rbx, %rax	# tmp144, D.59846
+ 1247 0a69 4889C7   		movq	%rax, %rdi	# D.59846,
+ 1248 0a6c E8000000 		call	_Unwind_Resume@PLT	#
+ 1248      00
+ 1249              	.LEHE4:
+ 1250              	.L53:
+ 1251 0a71 E8000000 		call	__stack_chk_fail@PLT	#
+ 1251      00
+ 1252              	.L50:
+ 1253 0a76 4883C450 		addq	$80, %rsp	#,
+ 1254 0a7a 5B       		popq	%rbx	#
+ 1255 0a7b 415C     		popq	%r12	#
+ 1256 0a7d 5D       		popq	%rbp	#
+ 1257              		.cfi_def_cfa 7, 8
+ 1258 0a7e C3       		ret	
+ 1259              		.cfi_endproc
+ 1260              	.LFE2342:
+ 1261              		.globl	__gxx_personality_v0
+ 1262              		.section	.gcc_except_table,"a",@progbits
+ 1263              	.LLSDA2342:
+ 1264 0000 FF       		.byte	0xff
+ 1265 0001 FF       		.byte	0xff
+ 1266 0002 01       		.byte	0x1
+ 1267 0003 1B       		.uleb128 .LLSDACSE2342-.LLSDACSB2342
+ 1268              	.LLSDACSB2342:
+ 1269 0004 35       		.uleb128 .LEHB0-.LFB2342
+ 1270 0005 49       		.uleb128 .LEHE0-.LEHB0
+ 1271 0006 00       		.uleb128 0
+ 1272 0007 00       		.uleb128 0
+ 1273 0008 8C01     		.uleb128 .LEHB1-.LFB2342
+ 1274 000a 05       		.uleb128 .LEHE1-.LEHB1
+ 1275 000b C604     		.uleb128 .L51-.LFB2342
+ 1276 000d 00       		.uleb128 0
+ 1277 000e A601     		.uleb128 .LEHB2-.LFB2342
+ 1278 0010 05       		.uleb128 .LEHE2-.LEHB2
+ 1279 0011 00       		.uleb128 0
+ 1280 0012 00       		.uleb128 0
+ 1281 0013 D201     		.uleb128 .LEHB3-.LFB2342
+ 1282 0015 D002     		.uleb128 .LEHE3-.LEHB3
+ 1283 0017 E104     		.uleb128 .L52-.LFB2342
+ 1284 0019 00       		.uleb128 0
+ 1285 001a DC04     		.uleb128 .LEHB4-.LFB2342
+ 1286 001c 1F       		.uleb128 .LEHE4-.LEHB4
+ 1287 001d 00       		.uleb128 0
+ 1288 001e 00       		.uleb128 0
+ 1289              	.LLSDACSE2342:
+ 1290              		.text
+ 1293              	_Z41__static_initialization_and_destruction_0ii:
+ 1294              	.LFB2997:
+ 1295              		.cfi_startproc
+ 1296 0a7f 55       		pushq	%rbp	#
+ 1297              		.cfi_def_cfa_offset 16
+ 1298              		.cfi_offset 6, -16
+ 1299 0a80 4889E5   		movq	%rsp, %rbp	#,
+ 1300              		.cfi_def_cfa_register 6
+ 1301 0a83 4883EC10 		subq	$16, %rsp	#,
+ 1302 0a87 897DFC   		movl	%edi, -4(%rbp)	# __initialize_p, __initialize_p
+ 1303 0a8a 8975F8   		movl	%esi, -8(%rbp)	# __priority, __priority
+ 1304              	# laplacev4.cpp:183: }
+ 1305 0a8d 837DFC01 		cmpl	$1, -4(%rbp)	#, __initialize_p
+ 1306 0a91 753B     		jne	.L56	#,
+ 1307              	# laplacev4.cpp:183: }
+ 1308 0a93 817DF8FF 		cmpl	$65535, -8(%rbp)	#, __priority
+ 1308      FF0000
+ 1309 0a9a 7532     		jne	.L56	#,
+ 1310              	# /usr/include/c++/11.1.0/iostream:74:   static ios_base::Init __ioinit;
+ 1311 0a9c 488D0500 		leaq	_ZStL8__ioinit(%rip), %rax	#, tmp82
+ 1311      000000
+ 1312 0aa3 4889C7   		movq	%rax, %rdi	# tmp82,
+ 1313 0aa6 E8000000 		call	_ZNSt8ios_base4InitC1Ev@PLT	#
+ 1313      00
+ 1314 0aab 488D0500 		leaq	__dso_handle(%rip), %rax	#, tmp83
+ 1314      000000
+ 1315 0ab2 4889C2   		movq	%rax, %rdx	# tmp83,
+ 1316 0ab5 488D0500 		leaq	_ZStL8__ioinit(%rip), %rax	#, tmp84
+ 1316      000000
+ 1317 0abc 4889C6   		movq	%rax, %rsi	# tmp84,
+ 1318 0abf 488B0500 		movq	_ZNSt8ios_base4InitD1Ev@GOTPCREL(%rip), %rax	#, tmp86
+ 1318      000000
+ 1319 0ac6 4889C7   		movq	%rax, %rdi	# tmp85,
+ 1320 0ac9 E8000000 		call	__cxa_atexit@PLT	#
+ 1320      00
+ 1321              	.L56:
+ 1322              	# laplacev4.cpp:183: }
+ 1323 0ace 90       		nop	
+ 1324 0acf C9       		leave	
+ 1325              		.cfi_def_cfa 7, 8
+ 1326 0ad0 C3       		ret	
+ 1327              		.cfi_endproc
+ 1328              	.LFE2997:
+ 1331              	_GLOBAL__sub_I__Z11print_arrayPdRSo:
+ 1332              	.LFB2998:
+ 1333              		.cfi_startproc
+ 1334 0ad1 55       		pushq	%rbp	#
+ 1335              		.cfi_def_cfa_offset 16
+ 1336              		.cfi_offset 6, -16
+ 1337 0ad2 4889E5   		movq	%rsp, %rbp	#,
+ 1338              		.cfi_def_cfa_register 6
+ 1339              	# laplacev4.cpp:183: }
+ 1340 0ad5 BEFFFF00 		movl	$65535, %esi	#,
+ 1340      00
+ 1341 0ada BF010000 		movl	$1, %edi	#,
+ 1341      00
+ 1342 0adf E89BFFFF 		call	_Z41__static_initialization_and_destruction_0ii	#
+ 1342      FF
+ 1343 0ae4 5D       		popq	%rbp	#
+ 1344              		.cfi_def_cfa 7, 8
+ 1345 0ae5 C3       		ret	
+ 1346              		.cfi_endproc
+ 1347              	.LFE2998:
+ 1349              		.section	.init_array,"aw"
+ 1350              		.align 8
+ 1351 0000 00000000 		.quad	_GLOBAL__sub_I__Z11print_arrayPdRSo
+ 1351      00000000 
+ 1352              		.section	.rodata
+ 1353 005f 00       		.align 8
+ 1354              	.LC3:
+ 1355 0060 8DEDB5A0 		.long	-1598689907
+ 1356 0064 F7C6B03E 		.long	1051772663
+ 1357              		.align 8
+ 1358              	.LC4:
+ 1359 0068 00000000 		.long	0
+ 1360 006c 0000F03F 		.long	1072693248
+ 1361              		.align 8
+ 1362              	.LC5:
+ 1363 0070 00000000 		.long	0
+ 1364 0074 00000000 		.long	0
+ 1365              		.align 8
+ 1366              	.LC6:
+ 1367 0078 00000000 		.long	0
+ 1368 007c 0000D03F 		.long	1070596096
+ 1369              		.hidden	DW.ref.__gxx_personality_v0
+ 1370              		.weak	DW.ref.__gxx_personality_v0
+ 1371              		.section	.data.rel.local.DW.ref.__gxx_personality_v0,"awG",@progbits,DW.ref.__gxx_personality_v0,c
+ 1372              		.align 8
+ 1375              	DW.ref.__gxx_personality_v0:
+ 1376 0000 00000000 		.quad	__gxx_personality_v0
+ 1376      00000000 
+ 1377              		.hidden	__dso_handle
+ 1378              		.ident	"GCC: (GNU) 11.1.0"
+ 1379              		.section	.note.GNU-stack,"",@progbits

@@ -121,6 +121,7 @@ Real LaplaceSolver :: timeStep(const Real dt)
 	}
 	return sqrt(err);
 }
+
 Real LaplaceSolver :: solve(const int n_iter, const Real eps)
 {
 	Real err = timeStep();
