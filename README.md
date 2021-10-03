@@ -31,3 +31,23 @@ Também pode ser usado o scrpit bash para gerar o relatório para alguma versão
 ```
 ./run.sh <Version>
 ```
+
+## Trabalho 3
+Para produzir os resultados do trabalho 3, só é necessário utilizar o script disponível no diretório
+
+Produz os resultados para a versão serial
+```
+./run.sh serial 
+```
+Produz os resultados para a versão com vetorização
+```
+./run.sh otim
+```
+Produz os resultados para a versão com OpenMP
+```
+./run.sh omp
+```
+Produz os resultados para a versão com OpenMP e vetorização
+```
+./run.sh otimomp
+```
