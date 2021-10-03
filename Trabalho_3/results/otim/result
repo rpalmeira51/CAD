@@ -1,0 +1,15 @@
+Nx value :512
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.502046seconds.
+================================
+Nx value :1024
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.53612seconds.
+================================
+Nx value :2048
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 10.4861seconds.
+================================

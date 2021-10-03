@@ -1,0 +1,126 @@
+++++++++++++++++++++++++++++
+Nx value :512
+Using 1 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.66258seconds.
+================================
+Using 2 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.313036seconds.
+================================
+Using 3 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.244277seconds.
+================================
+Using 4 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.179258seconds.
+================================
+Using 5 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.219027seconds.
+================================
+Using 6 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.165278seconds.
+================================
+Using 7 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.154804seconds.
+================================
+Using 8 threads
+Enter nx n_iter eps --> nx = 512, ny = 512, n_iter = 1000, eps = 1e-16
+0.0401134
+Iterations took 0.2681seconds.
+================================
+++++++++++++++++++++++++++++
+Nx value :1024
+Using 1 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.76538seconds.
+================================
+Using 2 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.62071seconds.
+================================
+Using 3 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.62816seconds.
+================================
+Using 4 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.62828seconds.
+================================
+Using 5 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.61297seconds.
+================================
+Using 6 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.61683seconds.
+================================
+Using 7 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.71869seconds.
+================================
+Using 8 threads
+Enter nx n_iter eps --> nx = 1024, ny = 1024, n_iter = 1000, eps = 1e-16
+0.0576041
+Iterations took 2.77203seconds.
+================================
+++++++++++++++++++++++++++++
+Nx value :2048
+Using 1 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 11.9268seconds.
+================================
+Using 2 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 10.5315seconds.
+================================
+Using 3 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 10.6252seconds.
+================================
+Using 4 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 10.7399seconds.
+================================
+Using 5 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 10.8076seconds.
+================================
+Using 6 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 10.8468seconds.
+================================
+Using 7 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 11.2478seconds.
+================================
+Using 8 threads
+Enter nx n_iter eps --> nx = 2048, ny = 2048, n_iter = 1000, eps = 1e-16
+0.0817692
+Iterations took 9.81717seconds.
+================================
